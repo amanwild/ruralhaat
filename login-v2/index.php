@@ -101,8 +101,8 @@
   <link rel='dns-prefetch' href='http://maps.googleapis.com/' />
   <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
   <link rel='preconnect' href='https://fonts.gstatic.com/' crossorigin />
-  <link rel="alternate" type="application/rss+xml" title="Classiera Classifieds Ads WordPress Theme &raquo; Feed" href="../feed/index.html" />
-  <link rel="alternate" type="application/rss+xml" title="Classiera Classifieds Ads WordPress Theme &raquo; Comments Feed" href="../comments/feed/index.html" />
+  <link rel="alternate" type="application/rss+xml" title="  &raquo; Feed" href="../feed/index.html" />
+  <link rel="alternate" type="application/rss+xml" title="  &raquo; Comments Feed" href="../comments/feed/index.html" />
   <link rel='stylesheet' id='wp-block-library-css' href='../wp-includes/css/dist/block-library/style.min6a4d.css?ver=6.1.1' type='text/css' media='all' />
   <link rel='stylesheet' id='wc-blocks-vendors-style-css' href='../wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style556e.css?ver=9.4.4' type='text/css' media='all' />
   <link rel='stylesheet' id='wc-blocks-style-css' href='../wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style556e.css?ver=9.4.4' type='text/css' media='all' />

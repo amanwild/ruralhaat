@@ -2,29 +2,60 @@
 <?php
 
 session_start();
-// $loggedin = $_SESSION['loggedin'];
-// $user = $_SESSION['user_Username'];
-// // echo $loggedin;
-// // // echo "<br>";
-// // echo $user;
-// // // echo "<br>";
-if ((isset($_SESSION['user_username']) &&($_SESSION['user_type']=='user_manager' || ($_SESSION['user_type']=='admin'|| $_SESSION['user_type']=='inspector')))&& ($_SESSION['slave_id']!='')) {
-  $user_first_name =$_SESSION['user_first_name'];
+
+include "db.php";
+include "../service/filter_input.php";
+include "../service/upload_image.php";
+
+if (isset($_SESSION['slave_id'])) {
+  // echo "<script>alert('id is set');</script>";
+}else{
+  if (isset($_GET['slave_id'])) {
+    if (isset($_GET['slave_id']) && '' != $_GET['slave_id']) {
+      // echo "<script>alert('id is not set');</script>";
+        $slave_id = $_GET['slave_id'];
+        $select_slave_query = "SELECT * from users_entries where user_id = $slave_id";
+        try {
+          // echo $select_slave_query;
+          $select_slave_result = mysqli_query($connect, $select_slave_query);
+          $num_for_slave  = mysqli_num_rows($select_slave_result);
+          if ($num_for_slave) {
+            while ($row_for_slave = mysqli_fetch_assoc($select_slave_result)) {
+              $_SESSION['slave_is_verified_admin'] = $row_for_slave['is_verified_admin'];
+              $_SESSION['slave_type'] = $row_for_slave['user_type'];
+              $_SESSION['slave_username'] = $row_for_slave['user_username'];
+              $_SESSION['slave_email'] = $row_for_slave['user_email'];
+              $_SESSION['slave_id'] = $row_for_slave['user_id'];
+              $_SESSION['slave_first_name'] = $row_for_slave['user_first_name'];
+              $_SESSION['slave_last_name'] = $row_for_slave['user_last_name'];
+              $_SESSION['slave_image'] = $row_for_slave['user_image'];
+            }
+          }
+        } catch (Exception $e) {
+          echo "Data insertion failed " . "<br>";
+          // echo 'Message: ' . $e->getMessage() . "<br>";
+        }
+      }
+  }
+}
+
+if ((isset($_SESSION['user_username']) && ($_SESSION['user_type'] == 'user_manager' || ($_SESSION['user_type'] == 'admin' || $_SESSION['user_type'] == 'inspector'))) && ($_SESSION['slave_id'] != '')) {
+  $user_first_name = $_SESSION['user_first_name'];
   $user_last_name = $_SESSION['user_last_name'];
-  $user_email =$_SESSION['user_email'];
-  $user_username =$_SESSION['user_username'] ; 
-  $user_id =$_SESSION['user_id'];
-  if(isset($_SESSION['user_image'])){
-    $user_image =$_SESSION['user_image'];
+  $user_email = $_SESSION['user_email'];
+  $user_username = $_SESSION['user_username'];
+  $user_id = $_SESSION['user_id'];
+  if (isset($_SESSION['user_image'])) {
+    $user_image = $_SESSION['user_image'];
   }
-  if(isset($_SESSION['user_image_url'])){
-    $user_image_url =$_SESSION['user_image_url'];
+  if (isset($_SESSION['user_image_url'])) {
+    $user_image_url = $_SESSION['user_image_url'];
   }
-  if(isset($_SESSION['user_phone'])){
-    $user_phone =$_SESSION['user_phone'];
+  if (isset($_SESSION['user_phone'])) {
+    $user_phone = $_SESSION['user_phone'];
   }
-  if(isset($_SESSION['user_email'])){
-    $user_email =$_SESSION['user_email'];
+  if (isset($_SESSION['user_email'])) {
+    $user_email = $_SESSION['user_email'];
   }
   // echo$user_First_name .$user_Last_name . $user_Email. $user_Username.$user_Id;  echo "Valid user";
 } else {
@@ -33,7 +64,6 @@ if ((isset($_SESSION['user_username']) &&($_SESSION['user_type']=='user_manager'
   // $path  = "Signin";
   header("location: ../login/index.php");
 }
-include "db.php";
 
 $select_query = "SELECT * FROM `users_entries` WHERE `user_id` = " . $_SESSION['user_id'];
 $select_result  = mysqli_query($connect, $select_query);

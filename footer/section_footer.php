@@ -5,7 +5,7 @@
           <div class="widget-box">
             <div class="widget-title">
               <img class="img-responsive" src="../wp-content/uploads/2018/11/logo grid-2x.png"
-                alt="Classiera Classifieds Ads WordPress Theme">
+                alt=" ">
             </div>
             <div class="widget-content">
               <div class="textwidget">“Earlier there was no platform to sell our products. Rural haat was in a very pathetic condition. With the help of MGNREGS, construction of this rural market has become possible which is a great asset to people like me” - Manoj Kumar, a small and marginal farmer..</div>

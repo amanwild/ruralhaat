@@ -63,7 +63,7 @@
             <div class="social-login-v2">
               <!-- <h5 class="text-uppercase"><b>Register an Account</b></h5> -->
             </div>
-            <form id="registration_form" class="text-center">
+            <form enctype="multipart/form-data"  id="registration_form" class="text-center">
 
             <div class="form-group">
                 <div class="inner-addon left-addon" style="">

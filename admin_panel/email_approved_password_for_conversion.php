@@ -3,11 +3,11 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-require('PHPMailer/Exception.php');
-require('PHPMailer/SMTP.php');
-require('PHPMailer/PHPMailer.php');
+require('../php_mailer_config/PHPMailer/Exception.php');
+require('../php_mailer_config/PHPMailer/SMTP.php');
+require('../php_mailer_config/PHPMailer/PHPMailer.php');
 
-function send_mail($email,$username,$password)
+function send_mail($email,$username)
 {
 
   $mail = new PHPMailer(true);
@@ -39,7 +39,7 @@ function send_mail($email,$username,$password)
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Your Account request is accepted from RURALHAAT';
+    $mail->Subject = 'Seller Account Request is Accepted from RURALHAAT';
     $mail->Body    = "<!DOCTYPE html>
     <html>
     
@@ -181,11 +181,7 @@ function send_mail($email,$username,$password)
                                 <p style='margin: 10px;padding: 15px'>Username: $username</p>
                             </td>
                         </tr>
-                        <tr>
-                            <td bgcolor='#ffffff' align='left' style='padding: 20px 30px 40px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;'>
-                                <p style='margin: 10px;padding: 15px'>Paassword: $password</p>
-                            </td>
-                        </tr>
+                       
                        
                         <tr>
                             <td bgcolor='#ffffff' align='left'>
@@ -194,7 +190,7 @@ function send_mail($email,$username,$password)
                                         <td bgcolor='#ffffff' align='center' style='padding: 20px 30px 60px 30px;'>
                                             <table border='0' cellspacing='0' cellpadding='0'>
                                                 <tr>
-                                                    <td align='center' style='border-radius: 3px;padding: 15px;' bgcolor='red'><span style='font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #5CB85C; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid red; display: inline-block;'>Your Account is Activate</span>
+                                                    <td align='center' style='border-radius: 3px;padding: 15px;' bgcolor='red'><span style='font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #5CB85C; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid red; display: inline-block;'>Your Request is Accepted for Seller</span>
                                                  
                                                 </tr>
                                                

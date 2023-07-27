@@ -15,16 +15,110 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="../wp-content/uploads/data/favicon.png" />
   <!-- Style CSS -->
-  <link rel="stylesheet" href="css/stylesheet.css" />
-  <link rel="stylesheet" href="css/mmenu.css" />
-  <link rel="stylesheet" href="css/perfect-scrollbar.css" />
-  <link rel="stylesheet" href="css/style.css" id="colors" />
+  <link rel="stylesheet" href="../css/stylesheet.css" />
+  <link rel="stylesheet" href="../css/mmenu.css" />
+  <link rel="stylesheet" href="../css/perfect-scrollbar.css" />
+  <link rel="stylesheet" href="../css/style.css" id="colors" />
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&amp;display=swap&amp;subset=latin-ext,vietnamese" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800" rel="stylesheet" type="text/css" />
 </head>
 
 <body onload="validate_user()">
+
+
+  <?php
+  // foreach ($_POST as $key => $value) {
+  //   echo "Field " . htmlspecialchars($key) . " is " . htmlspecialchars($value) . "<br>";
+  // }
+  // echo "hello";
+
+  if (($_SERVER["REQUEST_METHOD"] == "POST") && isset($_POST["addList"]) && $_POST['listing_title']) {
+    // $user_id = $_POST['user_id'];
+    $user_id = $_SESSION['user_id'];
+
+    $listing_title = "";
+    if (isset($_POST["listing_title"])) {
+      $listing_title = $_POST['listing_title'];
+    }
+
+    $category_id = "";
+    if (isset($_POST["category_id"])) {
+      $category_id = $_POST['category_id'];
+    }
+
+    $keywords = "";
+    if (isset($_POST["keywords"])) {
+      $keywords = $_POST['keywords'];
+    }
+
+    $tags = "";
+    if (isset($_POST["tags"])) {
+      $tags = $_POST['tags'];
+    }
+
+    $price = "";
+    if (isset($_POST["price"])) {
+      $price = $_POST['price'];
+    }
+
+    $sub_category_id  = "";
+    if (isset($_POST["sub_category_id"])) {
+      $sub_category_id  = $_POST['sub_category_id'];
+    }
+
+    $listing_description = "";
+    if (isset($_POST["listing_description"])) {
+      $listing_description = $_POST['listing_description'];
+    }
+
+    $country_id = "";
+    if (isset($_POST["country_id"])) {
+      $country_id = $_POST['country_id'];
+    }
+
+    $city_id = "";
+    if (isset($_POST["city"])) {
+      $city_id = $_POST['city'];
+    }
+
+    $state_id = "";
+    if (isset($_POST["state"])) {
+      $state_id = $_POST['state'];
+    }
+    $pincode = "";
+    if (isset($_POST["pincode"])) {
+      $pincode = $_POST['pincode'];
+    }
+
+    $address = "";
+    if (isset($_POST["address"])) {
+      $address = $_POST['address'];
+    }
+
+    $logo_image = "";
+    if (isset($_FILES['logo_image'])) {
+      if ("" != $_FILES["logo_image"]["tmp_name"]) {
+        $logo_image = get_server_image_name('logo_image');
+      }
+    }
+    include "../db.php";
+    try {
+      $insert_query = "INSERT INTO `listing` (`listing_id`, `listing_title`, `listing_category_id`, `listing_keyword`, `listing_tag`, `listing_price`, `listing_sub_category_id`, `listing_description`, `listing_country_id`, `listing_pincode`, `listing_state_id`, `listing_adderess`, `listing_city_id`, `listing_image`, `listing_since`, `listing_status_timestamp`, `listing_status`, `listing_permission`, `listing_owner_id`) VALUES (NULL, '$listing_title', '$category_id', '$keywords', '$tags', '$price', '$sub_category_id', '$listing_description', '1', '$pincode', '$state_id', '$address', '$city_id', '$logo_image',  current_timestamp(),  current_timestamp(), 'Pending', 'Pending', '" . $_SESSION['user_id'] . "')";
+      $insert_result = mysqli_query($connect, $insert_query);
+
+      // echo $insert_query;
+     
+    } catch (Exception $e) {
+      echo "Data insertion failed " . "<br>";
+      // echo 'Message: ' . $e->getMessage() . "<br>";
+    }
+
+
+    // echo "hello";
+  }
+  ?>
+
 
   <?php include "./component/preloader.php" ?>
 
@@ -61,109 +155,34 @@
             </div>
           </div>
         </div>
-        <?php
-        // foreach ($_POST as $key => $value) {
-        //   echo "Field " . htmlspecialchars($key) . " is " . htmlspecialchars($value) . "<br>";
-        // }
-        // echo "hello";
-
-        if (($_SERVER["REQUEST_METHOD"] == "POST") && isset($_POST["addList"]) && $_POST['listing_title']) {
-          // $user_id = $_POST['user_id'];
-          $user_id = $_SESSION['user_id'];
-
-          $listing_title = "";
-          if (isset($_POST["listing_title"])) {
-            $listing_title = $_POST['listing_title'];
-          }
-
-          $category_id = "";
-          if (isset($_POST["category_id"])) {
-            $category_id = $_POST['category_id'];
-          }
-
-          $keywords = "";
-          if (isset($_POST["keywords"])) {
-            $keywords = $_POST['keywords'];
-          }
-
-          $tags = "";
-          if (isset($_POST["tags"])) {
-            $tags = $_POST['tags'];
-          }
-
-          $price = "";
-          if (isset($_POST["price"])) {
-            $price = $_POST['price'];
-          }
-
-          $sub_category_id  = "";
-          if (isset($_POST["sub_category_id"])) {
-            $sub_category_id  = $_POST['sub_category_id'];
-          }
-
-          $listing_description = "";
-          if (isset($_POST["listing_description"])) {
-            $listing_description = $_POST['listing_description'];
-          }
-
-          $country_id = "";
-          if (isset($_POST["country_id"])) {
-            $country_id = $_POST['country_id'];
-          }
-
-          $city_id = "";
-          if (isset($_POST["city"])) {
-            $city_id = $_POST['city'];
-          }
-
-          $state_id = "";
-          if (isset($_POST["state"])) {
-            $state_id = $_POST['state'];
-          }
-          $pincode = "";
-          if (isset($_POST["pincode"])) {
-            $pincode = $_POST['pincode'];
-          }
-
-          $address = "";
-          if (isset($_POST["address"])) {
-            $address = $_POST['address'];
-          }
-
-          $logo_image = "";
-          if (isset($_POST["logo_image"])) {
-            $logo_image = $_POST['logo_image'];
-          }
-
-          include "../db.php"; 
-          try {
-            $insert_query = "INSERT INTO `listing` (`listing_id`, `listing_title`, `listing_category_id`, `listing_keyword`, `listing_tag`, `listing_price`, `listing_sub_category_id`, `listing_description`, `listing_country_id`, `listing_pincode`, `listing_state_id`, `listing_adderess`, `listing_city_id`, `listing_image`, `listing_since`, `listing_status_timestamp`, `listing_status`, `listing_permission`, `listing_owner_id`) VALUES (NULL, '$listing_title', '$category_id', '$keywords', '$tags', '$price', '$sub_category_id', '$listing_description', '1', '$pincode', '$state_id', '$address', '$city_id', '$logo_image',  current_timestamp(),  current_timestamp(), 'Pending', 'Pending', '" . $_SESSION['user_id'] . "')";
-            $insert_result = mysqli_query($connect, $insert_query);
-
-            // echo $insert_query;
-            if ($insert_result) {
-              echo '<div class="row"> <div class="col-md-12"> <div class="notification success closeable margin-bottom-30"> <p> Listing is Successfully Added </p> <a class="close" href="#"></a> </div> </div> </div>'; // echo ("<br> email shooting successfull <br>");
-
-              // echo ("<br> email shooting successfull <br>");
-            } else {
-
-              echo "Data insertion failed " . "<br>";
-            }
-          } catch (Exception $e) {
-            echo "Data insertion failed " . "<br>";
-            // echo 'Message: ' . $e->getMessage() . "<br>";
-          }
 
 
-          // echo "hello";
-        }
-        ?>
+
+
+
+<?php  if (($_SERVER["REQUEST_METHOD"] == "POST") && isset($_POST["addList"]) && $_POST['listing_title']) {
+
+if ($insert_result) {
+  echo '<div class="row"> <div class="col-md-12"> <div class="notification success closeable margin-bottom-30"> <p> Listing is Successfully Added </p> <a class="close" href="#"></a> </div> </div> </div>'; // echo ("<br> email shooting successfull <br>");
+
+  // echo ("<br> email shooting successfull <br>");
+} else {
+
+  echo "Data insertion failed " . "<br>";
+}
+}?>
+
+
+
+
+
+
         <!-- Form data -->
         <div class="row">
           <div class="col-lg-12">
 
             <div id="utf_add_listing_part">
-              <form method="POST" action="<?= $_SERVER["REQUEST_URI"]; ?>">
+              <form enctype="multipart/form-data" method="POST" action="<?= $_SERVER["REQUEST_URI"]; ?>">
                 <input type="hidden" name="addList" id="addList" value="addList" />
                 <div class="add_utf_listing_section margin-top-45" validate>
                   <div class="utf_add_listing_part_headline_part">
@@ -333,23 +352,11 @@
                   <div class="row with-forms">
                     <div class="utf_submit_section col-md-4">
                       <h4>Logo</h4>
-                      <!-- <form></form> -->
+                      <!-- <form enctype="multipart/form-data" ></form> -->
                       <div class="">
-                        <input type="file" onchange="showimg();" name="logo_image" id="logo_image" required>
-                      </div>
-                      <div class="">
-                        <img style="display:none" class="dropzone" name="view_logo_image" id="view_logo_image" src="" />
+                        <input type="file" name="logo_image" id="logo_image" required>
                       </div>
 
-                      <script>
-                        function showimg() {
-                          document.getElementById("view_logo_image").style.display = "block";
-                          var x = (document.getElementById("logo_image").value).slice(12, 100);
-                          console.log(x);
-                          document.getElementById("view_logo_image").src = "../wp-content/uploads/data/" + x;
-                          // alert("hello");
-                        }
-                      </script>
 
                       </input>
                     </div>
@@ -366,18 +373,18 @@
   </div>
 
   <!-- Scripts -->
-  <script src="scripts/jquery-3.4.1.min.js"></script>
-  <script src="scripts/chosen.min.js"></script>
-  <script src="scripts/perfect-scrollbar.min.js"></script>
-  <script src="scripts/slick.min.js"></script>
-  <script src="scripts/rangeslider.min.js"></script>
-  <script src="scripts/bootstrap-select.min.js"></script>
-  <script src="scripts/magnific-popup.min.js"></script>
-  <script src="scripts/jquery-ui.min.js"></script>
-  <script src="scripts/mmenu.js"></script>
-  <script src="scripts/tooltips.min.js"></script>
-  <script src="scripts/color_switcher.js"></script>
-  <script src="scripts/jquery_custom.js"></script>
+  <script src="../scripts/jquery-3.4.1.min.js"></script>
+  <script src="../scripts/chosen.min.js"></script>
+  <script src="../scripts/perfect-scrollbar.min.js"></script>
+  <script src="../scripts/slick.min.js"></script>
+  <script src="../scripts/rangeslider.min.js"></script>
+  <script src="../scripts/bootstrap-select.min.js"></script>
+  <script src="../scripts/magnific-popup.min.js"></script>
+  <script src="../scripts/jquery-ui.min.js"></script>
+  <script src="../scripts/mmenu.js"></script>
+  <script src="../scripts/tooltips.min.js"></script>
+  <script src="../scripts/color_switcher.js"></script>
+  <script src="../scripts/jquery_custom.js"></script>
   <script>
     //   $(document).ready(function() {
     //     $('#country').on('change', function() {
@@ -444,7 +451,7 @@
       //   });
       // });
 
-    
+
       $('#state').on('change', function() {
         var state_id = this.value;
         // alert("hello");
@@ -460,7 +467,7 @@
             $("#city1").empty();
             $("#city1").append("<label for=''>City</label>",
               <?php
-             
+
               ?> "<div class='intro-search-field utf-chosen-cat-single'><select style='margin-bottom:0px' name='city' value='' title='' id='city' data-selected-text-format='count'> </select> </div>",
 
               <?php
@@ -507,10 +514,10 @@
 
   <!-- Maps -->
   <script src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
-  <script src="scripts/infobox.min.js"></script>
-  <script src="scripts/markerclusterer.js"></script>
-  <script src="scripts/maps.js"></script>
-  <script src="scripts/dropzone.js"></script>
+  <script src="../scripts/infobox.min.js"></script>
+  <script src="../scripts/markerclusterer.js"></script>
+  <script src="../scripts/maps.js"></script>
+  <script src="../scripts/dropzone.js"></script>
 </body>
 
 <!-- Mirrored from ulisting.utouchdesign.com/ulisting_ltr/dashboard_add_listing.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Apr 2023 11:41:50 GMT -->

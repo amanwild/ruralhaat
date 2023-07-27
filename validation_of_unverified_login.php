@@ -2,41 +2,40 @@
 <?php
 
 session_start();
-// $loggedin = $_SESSION['loggedin'];
-// $user = $_SESSION['user_Username'];
-// // echo $loggedin;
-// // // echo "<br>";
-// // echo $user;
-// // // echo "<br>";
-if (isset($_SESSION['user_username']) && (($_SESSION['user_type']=='admin')||($_SESSION['user_type']=='user'))) {
-  // $user_first_name =$_SESSION['user_first_name'];
-  // $user_last_name = $_SESSION['user_last_name'];
-  // $user_email =$_SESSION['user_email'];
-  // $user_username =$_SESSION['user_username'] ; 
-  // $user_id =$_SESSION['user_id'];
-  if(isset($_SESSION['user_first_name'])){
-    $user_first_name =$_SESSION['user_first_name'];
-  }
-  if(isset($_SESSION['user_last_name'])){
-    $user_last_name =$_SESSION['user_last_name'];
-  }
-  if(isset($_SESSION['user_username'])){
-    $user_username =$_SESSION['user_username'];
-  }
-  if(isset($_SESSION['user_id'])){
-    $user_id =$_SESSION['user_id'];
-  }
-  if(isset($_SESSION['user_image'])){
-    $user_image =$_SESSION['user_image'];
-  }
-  if(isset($_SESSION['user_image_url'])){
-    $user_image_url =$_SESSION['user_image_url'];
-  }
-  if(isset($_SESSION['user_phone'])){
-    $user_phone =$_SESSION['user_phone'];
-  }
-  if(isset($_SESSION['user_email'])){
-    $user_email =$_SESSION['user_email'];
+include "../service/filter_input.php";
+include "../service/upload_image.php";
+if (isset($_SESSION['user_username'])) {
+  if ('' != $_SESSION['user_type']) {
+
+    if (isset($_SESSION['user_first_name'])) {
+      $user_first_name = $_SESSION['user_first_name'];
+    }
+    if (isset($_SESSION['user_last_name'])) {
+      $user_last_name = $_SESSION['user_last_name'];
+    }
+    if (isset($_SESSION['user_username'])) {
+      $user_username = $_SESSION['user_username'];
+    }
+    if (isset($_SESSION['user_id'])) {
+      $user_id = $_SESSION['user_id'];
+    }
+    if (isset($_SESSION['user_image'])) {
+      $user_image = $_SESSION['user_image'];
+    }
+    if (isset($_SESSION['user_image_url'])) {
+      $user_image_url = $_SESSION['user_image_url'];
+    }
+    if (isset($_SESSION['user_phone'])) {
+      $user_phone = $_SESSION['user_phone'];
+    }
+    if (isset($_SESSION['user_email'])) {
+      $user_email = $_SESSION['user_email'];
+    }
+  } else {
+    // echo "INVALID user";
+    // echo "<br>";
+    // $path  = "Signin";
+    header("location: ../login/index.php");
   }
   // echo$user_First_name .$user_Last_name . $user_Email. $user_Username.$user_Id;  echo "Valid user";
 } else {

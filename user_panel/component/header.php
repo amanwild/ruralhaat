@@ -147,7 +147,7 @@ if($total_view_result){
                   echo "../wp-content/uploads/data/dashboard-avatar.jpg";
                 }
               }
-              ?>" alt="" /></span>
+              ?>"  alt="" /></span>
               <!-- <span><img src="../wp-content/uploads/data/dashboard-avatar.jpg" alt="" /></span> -->
               <!-- <span><img src="../wp-content/uploads/data/dummy_profile_img.webp" alt="" /></span
                       >Hi, John! -->

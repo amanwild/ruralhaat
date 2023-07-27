@@ -11,7 +11,7 @@
         role="navigation">
         <div class="navmenu-brand clearfix">
           <a href="../index.php">
-            <img src="../wp-content/uploads/2021/12/logo-grid-3 (2).png" alt="Classiera Classifieds Ads WordPress Theme">
+            <img src="../wp-content/uploads/2021/12/logo-grid-3 (2).png" alt=" ">
           </a>
           <button type="button" class="offcanvas-button" data-toggle="offcanvas" data-target="#myNavmenu">
             <i class="fas fa-times"></i>
@@ -56,7 +56,7 @@
             </li>
             <li id="menu-item-190"
               class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-190 dropdown">
-              <a title="Home" href="../success stories/index.php" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn"
+              <a title="Home" href="../admin_panel/success_story.php" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn"
                 class="dropdown-toggle" aria-haspopup="true">Sucess Stories <span class="caret"></span></a>
             </li>
             <!-- <li id="menu-item-190"
@@ -112,7 +112,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand-custom" href="../index.php">
-            <img class="img-responsive" src="../wp-content/uploads/2021/12/logo-grid-3 (2).png" alt="Classiera Classifieds Ads WordPress Theme">
+            <img class="img-responsive" src="../wp-content/uploads/2021/12/logo-grid-3 (2).png" alt=" ">
           </a>
         </div><!--navbar-header-->
         <div class="collapse navbar-collapse visible-lg" id="navbarCollapse">
@@ -125,7 +125,7 @@
 
             <!-- <a href="../submit-ad/index.php" class="btn btn-primary outline round">Submit Ad</a> -->
 
-            <form id="myForm" action="../logout/index.php" method="POST">
+            <form enctype="multipart/form-data"  id="myForm" action="../logout/index.php" method="POST">
               <input id="Logout" name="Logout" value="Logout" type="hidden"></input>
 
               <a class="btn btn-primary outline round" href="../logout/index.php" type="submit" id="logout_btn" name="logout_btn">Logout</a>
@@ -175,6 +175,10 @@
             </li>
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-190 dropdown">
               <a title="Home" href="../admin_panel/cummunity_member.php" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn" class="dropdown-toggle" aria-haspopup="true">Cummunity Member
+              </a>
+            </li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-190 dropdown">
+              <a title="Home" href="../admin_panel/success_story.php" data-toggle="dropdown" data-hover="dropdown" data-animations="fadeIn" class="dropdown-toggle" aria-haspopup="true">Success Story
               </a>
             </li>
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-190 dropdown">

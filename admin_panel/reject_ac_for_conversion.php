@@ -2,7 +2,11 @@
 session_start();
 include "../db.php";
 
-// echo "here";
+// echo "here";.
+
+
+require "email_reject_for_conversion.php";
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id"])) {
     // echo "enter";

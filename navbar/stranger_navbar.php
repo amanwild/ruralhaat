@@ -6,7 +6,7 @@
         role="navigation">
         <div class="navmenu-brand clearfix">
           <a href="../index.php">
-            <img src="../wp-content/uploads/2021/12/logo-grid-3 (2).png" alt="Classiera Classifieds Ads WordPress Theme">
+            <img src="../wp-content/uploads/2021/12/logo-grid-3 (2).png" alt=" ">
           </a>
           <button type="button" class="offcanvas-button" data-toggle="offcanvas" data-target="#myNavmenu">
             <i class="fas fa-times"></i>
@@ -82,7 +82,7 @@
             </button>
             <a class="navbar-brand-custom" href="../index.php">
               <img class="img-responsive" src="../wp-content/uploads/2021/12/logo-grid-3 (2).png"
-                alt="Classiera Classifieds Ads WordPress Theme">
+                alt=" ">
             </a>
           </div><!--navbar-header-->
           <div class="collapse navbar-collapse visible-lg" id="navbarCollapse">

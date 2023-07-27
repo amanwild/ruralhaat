@@ -26,7 +26,7 @@ try {
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <form data-toggle="validator" role="search" class="search-form search-form-v2 form-inline" action="../search_ads/index.php" method="get">
+                <form enctype="multipart/form-data"  data-toggle="validator" role="search" class="search-form search-form-v2 form-inline" action="../search_ads/index.php" method="get">
                     <div class="form-v6-bg">
                         <div class="form-group clearfix">
                             <div class="inner-addon left-addon right-addon">
@@ -77,7 +77,7 @@ try {
                                 ?>
                                 <!-- <input type="text" id="classieraSearchAJax" name="listing_keyword" class="form-control form-control-lg" placeholder="Enter keyword..." data-error="Please Type some words..!">
                                 <div class="help-block with-errors"></div> -->
-                                <span class="classieraSearchLoader"><img src="wp-content/themes/classiera/images/loader.gif" alt="classiera loader"></span>
+                                <span class="classieraSearchLoader"><img src="../wp-content/themes/classiera/images/loader.gif" alt="classiera loader"></span>
                                 <div class="classieraAjaxResult"></div>
                             </div>
                         </div><!--form-group-->

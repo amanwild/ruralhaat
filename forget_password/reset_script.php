@@ -17,7 +17,8 @@
       },
       success: function(result) {
         $('#label_for_email_validation').html(result);
-        if (0 < result.length) {
+        console.log(result);
+        if ( result.includes("Not")) {
           document.getElementById("validate_email_btn").disabled = true;
         } else {
           document.getElementById("validate_email_btn").disabled = false;

@@ -2,12 +2,7 @@
 session_start();
 include "../db.php";
 
-function filter($string)
-{
-    $string = str_replace("<", "&lt;", $string);
-    $string = str_replace(">", "&gt;", $string);
-    return $string;
-}
+
 
 
 $select_owner_of_comment_query = "SELECT * FROM `users_entries`";

@@ -26,7 +26,7 @@
                     </div>
                     <div class="col-lg-6 col-sm-5 col-xs-4">
                       <div class="view-as text-right flip">
-                        <a id="grid" class="grid " href="#">
+                        <a id="grid" class="grid active" href="#">
                           <i class="fas fa-th-large"></i>
                         </a>
                         <a id="grid" class="grid-medium" href="#">
@@ -58,6 +58,7 @@
               <div role="tabpanel" class="tab-pane fade in active" id="all">
                 <div class="container">
                   <div class="row">
+               
                     <?php
 
                     if ($select_listing_num > 0) {
@@ -68,6 +69,141 @@
                       }
                     }
                     ?>
+                    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+                  <script type="text/javascript">
+  //##### Add record when Add Record Button is click #########
+  $(document).ready(function() {
+
+
+    $("#enquery_form").submit(function(e) {
+
+      e.preventDefault();
+      // alert("hello")
+      var enquery_first_name = $("#enquery_first_name").val(); //build a post data structure
+      var enquery_last_name = $("#enquery_last_name").val(); //build a post data structure
+      var enquery_phone = $("#enquery_phone").val(); //build a post data structure
+      var enquery_email = $("#enquery_email").val(); //build a post data structure
+      var enquery_form_value = $("#enquery_form_value").val(); //build a post data structure
+      var enquery_listing_id = $("#enquery_listing_id").val(); //build a post data structure
+
+      jQuery.ajax({
+        type: "POST", // Post / Get method
+        url: "../listing_details/response.php", //Where form data is sent on submission
+        dataType: "text", // Data type, HTML, json etc.
+        data: {
+          enquery_first_name: enquery_first_name,
+          enquery_last_name: enquery_last_name,
+          enquery_phone: enquery_phone,
+          enquery_email: enquery_email,
+          enquery_listing_id: enquery_listing_id,
+          enquery_form_value: enquery_form_value,
+        }, //Form variables
+        success: function(response) {
+          // // $("#responds").append(response);
+          console.log(typeof(response));
+          console.log(response);
+          // console.log(response.includes("success"))  
+          if (response.includes("success")) {
+            // $("#contactForm").submit();
+            alert("Message Sent Successfully!");
+            location.reload();
+          }
+          if (response.includes("failed")) {
+            // alert("Message Sending Failed!");
+            // show_enquery_popup();
+
+          }
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+          // alert(xhr);
+          // alert(ajaxOptions);
+          // alert(thrownError);
+        }
+      });
+    });
+
+
+
+
+    // $("#report_form").submit(function(e) {
+    //   e.preventDefault();
+    //   alert("hello")
+    //   var report_ad_val = $("#report_ad_val").val(); //build a post data structure
+    //   var enquery_last_name = $("#enquery_last_name").val(); //build a post data structure
+    //   var enquery_phone = $("#enquery_phone").val(); //build a post data structure
+    //   var enquery_email = $("#enquery_email").val(); //build a post data structure
+    //   var enquery_form_value = $("#enquery_form_value").val(); //build a post data structure
+    //   var enquery_listing_id = $("#enquery_listing_id").val(); //build a post data structure
+
+    //   jQuery.ajax({
+    //     type: "POST", // Post / Get method
+    //     url: "../listing_details/response.php", //Where form data is sent on submission
+    //     dataType: "text", // Data type, HTML, json etc.
+    //     data: {
+    //       enquery_first_name: enquery_first_name,
+    //       enquery_last_name: enquery_last_name,
+    //       enquery_phone: enquery_phone,
+    //       enquery_email: enquery_email,
+    //       enquery_listing_id: enquery_listing_id,
+    //       enquery_form_value: enquery_form_value,
+    //     }, //Form variables
+    //     success: function(response) {
+    //       // // $("#responds").append(response);
+    //       // console.log(typeof(response));
+    //       // console.log(response.includes("success"))  
+    //       if (response.includes("success")) {
+
+    //         alert("Message Sent Successfully!");
+    //       }
+    //       if (response.includes("failed")) {
+    //         alert("Message Sending Failed!");
+    //         // show_enquery_popup();
+
+    //       }
+    //     },
+    //     error: function(xhr, ajaxOptions, thrownError) {
+    //       // alert(xhr);
+    //       // alert(ajaxOptions);
+    //       // alert(thrownError);
+    //     }
+    //   });
+    // });
+
+  });
+
+
+  function show_registration_popup() {
+    hide_login_popup();
+    hide_enquery_popup();
+
+    document.getElementById("overlay_for_registration").style.display = "block";
+  }
+
+  function hide_registration_popup() {
+    document.getElementById("overlay_for_registration").style.display = "none";
+  }
+
+  function show_login_popup() {
+    hide_registration_popup();
+    hide_enquery_popup();
+    document.getElementById("overlay_for_login").style.display = "block";
+  }
+
+  function hide_login_popup() {
+    document.getElementById("overlay_for_login").style.display = "none";
+  }
+
+  function show_enquery_popup() {
+    hide_registration_popup();
+    hide_login_popup();
+    document.getElementById("overlay_for_enquery").style.display = "block";
+  }
+
+  function hide_enquery_popup() {
+    document.getElementById("overlay_for_enquery").style.display = "none";
+  }
+</script>
+
                     <!--col-lg-4-->
                   </div>
                   <!--row-->

@@ -1,4 +1,5 @@
 <?php include "../validation_of_user.php" ?>
+<?php include "../service/unlink_image.php" ?>
 <?php
 // foreach ($_POST as $key => $value) {
 // 	echo "Field " . htmlspecialchars($key) . " is " . htmlspecialchars($value) . "<br>";
@@ -26,10 +27,10 @@ if (($_SERVER["REQUEST_METHOD"] == "POST") && isset($_POST["update_profile"]) &&
 	if (isset($_POST["user_phone"])) {
 		$user_phone = $_POST['user_phone'];
 	}
-	$user_email = '';
-	if (isset($_POST["user_email"])) {
-		$user_email = $_POST['user_email'];
-	}
+	// $user_email = '';
+	// if (isset($_POST["user_email"])) {
+	// 	$user_email = $_POST['user_email'];
+	// }
 	$user_state = '';
 	if (isset($_POST["user_state"])) {
 		$user_state = $_POST['user_state'];
@@ -66,11 +67,13 @@ if (($_SERVER["REQUEST_METHOD"] == "POST") && isset($_POST["update_profile"]) &&
 	if (isset($_POST["user_instagram_link"])) {
 		$user_instagram_link = $_POST['user_instagram_link'];
 	}
-	$user_image = '';
-	if (isset($_POST["user_image"])) {
-		$user_image = $_POST['user_image'];
+	$user_image = "";
+	if (isset($_FILES['user_image'])) {
+		if ("" != $_FILES["user_image"]["tmp_name"]) {
+			unlink_img('user_image', 'users_entries', 'user_id', $user_id, $connect);
+			$user_image = get_server_image_name('user_image');
+		}
 	}
-
 	// $user_last_name = $_POST['user_last_name'];
 	// $update_profile = $_POST['update_profile'];
 	// $user_id = $_POST['user_id'];
@@ -90,9 +93,9 @@ if (($_SERVER["REQUEST_METHOD"] == "POST") && isset($_POST["update_profile"]) &&
 
 	try {
 		$update_query = "UPDATE `users_entries` SET `user_phone` = '$user_phone', `user_first_name` = '$user_first_name', `user_last_name` = '$user_last_name', `user_country_id` = '$user_country', `user_state_id` = '$user_state', `user_city_id` = '$user_city', `user_age` = '$user_age', `user_dob` = '$user_dob', `user_address` = '$user_address', `user_facebook_link` = '$user_facebook_link', `user_google_link` = '$user_google_link', `user_instagram_link` = '$user_instagram_link' WHERE `users_entries`.`user_id` = $user_id";
-		if ("" != ($_POST["user_image"])) {
+		if ("" != ($user_image)) {
 			$update_query = "UPDATE `users_entries` SET `user_phone` = '$user_phone', `user_first_name` = '$user_first_name', `user_last_name` = '$user_last_name', `user_country_id` = '$user_country', `user_state_id` = '$user_state', `user_city_id` = '$user_city', `user_age` = '$user_age', `user_dob` = '$user_dob', `user_address` = '$user_address', `user_facebook_link` = '$user_facebook_link', `user_google_link` = '$user_google_link', `user_instagram_link` = '$user_instagram_link', `user_image` = '$user_image' WHERE `users_entries`.`user_id` = $user_id";
-			$_SESSION['user_image'] = $_POST["user_image"];
+			$_SESSION['user_image'] = $user_image;
 		}
 		// echo $update_query;
 		$update_result = mysqli_query($connect, $update_query);
@@ -114,7 +117,7 @@ if (($_SERVER["REQUEST_METHOD"] == "POST") && isset($_POST["update_profile"]) &&
 <!DOCTYPE html>
 <html lang="zxx">
 
-<!-- Mirrored from ulisting.utouchdesign.com/ulisting_ltr/dashboard_my_profile.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Apr 2023 11:41:57 GMT -->
+
 
 <head>
 	<meta name="author" content="">
@@ -124,12 +127,12 @@ if (($_SERVER["REQUEST_METHOD"] == "POST") && isset($_POST["update_profile"]) &&
 	<title>My Profile</title>
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="images/favicon.png">
+	<link rel="shortcut icon" href="../wp-content/uploads/data/favicon.png" />
 	<!-- Style CSS -->
-	<link rel="stylesheet" href="css/stylesheet.css">
-	<link rel="stylesheet" href="css/mmenu.css">
-	<link rel="stylesheet" href="css/perfect-scrollbar.css">
-	<link rel="stylesheet" href="css/style.css" id="colors">
+	<link rel="stylesheet" href="../css/stylesheet.css">
+	<link rel="stylesheet" href="../css/mmenu.css">
+	<link rel="stylesheet" href="../css/perfect-scrollbar.css">
+	<link rel="stylesheet" href="../css/style.css" id="colors">
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&amp;display=swap&amp;subset=latin-ext,vietnamese" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800" rel="stylesheet" type="text/css">
@@ -176,7 +179,7 @@ if (($_SERVER["REQUEST_METHOD"] == "POST") && isset($_POST["update_profile"]) &&
 
 				<?php
 
-include "../db.php"; 
+				include "../db.php";
 				$user_id = $_SESSION['user_id'];
 
 				$select_query = "SELECT * FROM `users_entries` WHERE `user_id` = $user_id";
@@ -189,7 +192,7 @@ include "../db.php";
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
 							<div class="utf_dashboard_list_box margin-top-0">
-								<form method="POST" action="<?= $_SERVER["REQUEST_URI"]; ?>">
+								<form enctype="multipart/form-data" method="POST" action="<?= $_SERVER["REQUEST_URI"]; ?>">
 									<h4 class="gray"><i class="sl sl-icon-user"></i> Profile Details</h4>
 									<div class="utf_dashboard_list_box-static">
 										<div class="edit-profile-photo"> <img id="profile_dp" src="
@@ -205,11 +208,7 @@ include "../db.php";
 											echo "../wp-content/uploads/data/dashboard-avatar.jpg";
 										}
 									} ?>" alt="">
-											<div class="change-photo-btn">
-												<div class="photoUpload"> <span><i class="fa fa-upload"></i> Upload Photo</span>
-													<input type="file" id="user_image" name="user_image" onchange="showimg();" class="upload" />
-												</div>
-											</div>
+
 										</div>
 										<?php if (false) {
 											if ($_SESSION['user_image_url'] != "") {
@@ -249,7 +248,18 @@ include "../db.php";
 													<input type="text" id="user_last_name" name="user_last_name" value="<?= $row['user_last_name'] ?>">
 												</div>
 												<div class="col-md-4">
-													<label>Phone <?php echo "<strong style='color:red;font-size:.7em;' id='label_for_phone_validation'>Not Verified</strong>"; ?></label>
+													<label>Update Image</label>
+													<input type="file" id="user_image" name="user_image" value="<?= $row['user_image'] ?>">
+												</div>
+												<div class="col-md-4">
+													<label>Phone <?php if ($row['is_verified_phone']) {
+
+																		echo "<strong style='color:green;font-size:.7em;' id='label_for_phone_validation'> Verified</strong>";
+																	} else {
+																		echo "<strong style='color:red;font-size:.7em;' id='label_for_phone_validation'>Not Verified</strong>";
+																	}
+
+																	?></label>
 
 
 													<!-- <input type="tel" class="form-control form-control-md sharp-edge" data-error="Phone required" required> -->
@@ -257,7 +267,14 @@ include "../db.php";
 													<input type="tel" pattern="[0-9]{10}" id="user_phone" name="user_phone" onchange="validation_for_email_username_phone()" onload="validation_for_email_username_phone()" id="user_phone" name="user_phone" value="<?= $row['user_phone'] ?>">
 												</div>
 												<div class="col-md-4">
-													<label>Email </label>
+													<label>Email <?php if ($row['is_verified_email']) {
+
+																		echo "<strong style='color:green;font-size:.7em;' id='label_for_phone_validation'> Verified</strong>";
+																	} else {
+																		echo "<strong style='color:red;font-size:.7em;' id='label_for_phone_validation'>Not Verified</strong>";
+																	}
+
+																	?></label>
 													<input type="text" id="user_email" name="user_email" value="<?= $row['user_email'] ?>">
 												</div>
 
@@ -265,10 +282,10 @@ include "../db.php";
 													<label>Birth</label>
 													<input type="text" id="user_dob" name="user_dob" value="">
 												</div> -->
-												<div class="col-md-4">
+												<!-- <div class="col-md-4">
 													<label>Age</label>
-													<input type="text" id="user_age" name="user_age" value="<?= $row['user_age'] ?>">
-												</div>
+													<input type="number" id="user_age" name="user_age" value="<?= $row['user_age'] ?>">
+												</div> -->
 												<!-- <div class="col-md-4">
 													<label>Country</label>
 													<input type="text" id="user_country" name="user_country" value="">
@@ -324,17 +341,17 @@ include "../db.php";
 	</div>
 
 	<!-- Scripts -->
-	<script src="scripts/jquery-3.4.1.min.js"></script>
-	<script src="scripts/chosen.min.js"></script>
-	<script src="scripts/perfect-scrollbar.min.js"></script>
-	<script src="scripts/slick.min.js"></script>
-	<script src="scripts/rangeslider.min.js"></script>
-	<script src="scripts/magnific-popup.min.js"></script>
-	<script src="scripts/jquery-ui.min.js"></script>
-	<script src="scripts/mmenu.js"></script>
-	<script src="scripts/tooltips.min.js"></script>
-	<script src="scripts/color_switcher.js"></script>
-	<script src="scripts/jquery_custom.js"></script>
+	<script src="../scripts/jquery-3.4.1.min.js"></script>
+	<script src="../scripts/chosen.min.js"></script>
+	<script src="../scripts/perfect-scrollbar.min.js"></script>
+	<script src="../scripts/slick.min.js"></script>
+	<script src="../scripts/rangeslider.min.js"></script>
+	<script src="../scripts/magnific-popup.min.js"></script>
+	<script src="../scripts/jquery-ui.min.js"></script>
+	<script src="../scripts/mmenu.js"></script>
+	<script src="../scripts/tooltips.min.js"></script>
+	<script src="../scripts/color_switcher.js"></script>
+	<script src="../scripts/jquery_custom.js"></script>
 	<script>
 		(function($) {
 			try {

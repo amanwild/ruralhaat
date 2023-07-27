@@ -17,7 +17,7 @@
                   </div><!--row-->
                   <div class="row">
                     <div class="col-lg-8 col-sm-10 col-md-8 center-block">
-                      <form method="POST" id="myform" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
+                      <form enctype="multipart/form-data"  method="POST" id="myform" action="<?php echo $_SERVER['REQUEST_URI']; ?>">
                         <div class="form-group">
                           <div class="row">
                             <div class="col-lg-4 col-sm-4 single-label">

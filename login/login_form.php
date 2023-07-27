@@ -13,7 +13,7 @@
               <!-- <img class="image" src="../wp-content/uploads/2018/11/mgiri office.jpg" alt="Your Image"> -->
               <div class="row">
                 <div class="col-lg-12 center-block">
-                  <form data-toggle="validator" method="POST" id="classiera_login_form" name="classiera_login_form">
+                  <form enctype="multipart/form-data"  data-toggle="validator" method="POST" id="classiera_login_form" name="classiera_login_form">
                     <div class="form-group">
                       <div class="row">
                         <div class="col-sm-3 col-lg-3 single-label left-pad-20">

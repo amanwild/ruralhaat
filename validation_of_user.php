@@ -2,30 +2,9 @@
 <?php
 
 session_start();
-// $loggedin = $_SESSION['loggedin'];
-// $user = $_SESSION['user_Username'];
-// // echo $loggedin;
-// // // echo "<br>";
-// // echo $user;
-// // // echo "<br>";
-// if (isset($_SESSION['user_type']) && isset($_SESSION['is_verified_admin'])) {
-//   if(($_SESSION['user_type'] == 'admin')&& ($_SESSION['is_verified_admin'] == '1')){
-//     include "admin_navbar.php";
-//   }
-//   if(($_SESSION['user_type'] == 'user')&& ($_SESSION['is_verified_admin'] == '1')){
-//     include "user_navbar.php";
-//   }
-// }else {
-//   include "stranger_navbar.php";
-// }
-
-
+include "../service/filter_input.php";
+include "../service/upload_image.php";
 if (((isset($_SESSION['user_username'])||($_SESSION['user_type']=='admin')) &&(($_SESSION['user_type']=='user')&& ($_SESSION['is_verified_admin'] == '1')))) {
-  // $user_first_name =$_SESSION['user_first_name'];
-  // $user_last_name = $_SESSION['user_last_name'];
-  // $user_email =$_SESSION['user_email'];
-  // $user_username =$_SESSION['user_username'] ; 
-  // $user_id =$_SESSION['user_id'];
 
 
   if(isset($_SESSION['user_image'])){

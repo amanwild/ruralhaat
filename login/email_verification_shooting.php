@@ -6,9 +6,9 @@ use PHPMailer\PHPMailer\Exception;
 
 function send_mail($email, $v_code)
 {
-  require('PHPMailer/Exception.php');
-  require('PHPMailer/SMTP.php');
-  require('PHPMailer/PHPMailer.php');
+  require('../php_mailer_config/PHPMailer/Exception.php');
+  require('../php_mailer_config/PHPMailer/SMTP.php');
+  require('../php_mailer_config/PHPMailer/PHPMailer.php');
 
   $mail = new PHPMailer(true);
 
@@ -179,7 +179,7 @@ function send_mail($email, $v_code)
                         </tr>
                         <tr>
                             <td align='left' bgcolor='#ffffff' style='padding: 24px; font-family: ' Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;'>
-                                <p style='margin: 0;'>Below OTP to reset your Ruralhaat Account Password.This OTP will valid for 24hr only. If you didn't Request for Reset password <a href='http://localhost:8080/author/index.html'>RURALHAAT</a>, you can safely delete this email.</p>
+                                <p style='margin: 0;'>Below OTP to reset your Ruralhaat Account Password.This OTP will valid for 24hr only. If you didn't Request for Reset password <a href='http://ruralhaat.org.in/index.php'>RURALHAAT</a>, you can safely delete this email.</p>
                             </td>
                         </tr>
                         <tr>

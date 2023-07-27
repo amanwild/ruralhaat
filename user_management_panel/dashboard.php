@@ -1,30 +1,30 @@
 <?php include "../validation_of_user_manager.php" ?>
 <?php
 
-if (isset($_GET['slave_id']) && '' != $_GET['slave_id']) {
-  $slave_id = $_GET['slave_id'];
-  $select_slave_query = "SELECT * from users_entries where user_id = $slave_id";
-  try {
-    // echo $select_slave_query;
-    $select_slave_result = mysqli_query($connect, $select_slave_query);
-    $num_for_slave  = mysqli_num_rows($select_slave_result);
-    if ($num_for_slave) {
-      while ($row_for_slave = mysqli_fetch_assoc($select_slave_result)) {
-        $_SESSION['slave_is_verified_admin'] = $row_for_slave['is_verified_admin'];
-        $_SESSION['slave_type'] = $row_for_slave['user_type'];
-        $_SESSION['slave_username'] = $row_for_slave['user_username'];
-        $_SESSION['slave_email'] = $row_for_slave['user_email'];
-        $_SESSION['slave_id'] = $row_for_slave['user_id'];
-        $_SESSION['slave_first_name'] = $row_for_slave['user_first_name'];
-        $_SESSION['slave_last_name'] = $row_for_slave['user_last_name'];
-        $_SESSION['slave_image'] = $row_for_slave['user_image'];
-      }
-    }
-  } catch (Exception $e) {
-    echo "Data insertion failed " . "<br>";
-    // echo 'Message: ' . $e->getMessage() . "<br>";
-  }
-}
+// if (isset($_GET['slave_id']) && '' != $_GET['slave_id']) {
+//   $slave_id = $_GET['slave_id'];
+//   $select_slave_query = "SELECT * from users_entries where user_id = $slave_id";
+//   try {
+//     // echo $select_slave_query;
+//     $select_slave_result = mysqli_query($connect, $select_slave_query);
+//     $num_for_slave  = mysqli_num_rows($select_slave_result);
+//     if ($num_for_slave) {
+//       while ($row_for_slave = mysqli_fetch_assoc($select_slave_result)) {
+//         $_SESSION['slave_is_verified_admin'] = $row_for_slave['is_verified_admin'];
+//         $_SESSION['slave_type'] = $row_for_slave['user_type'];
+//         $_SESSION['slave_username'] = $row_for_slave['user_username'];
+//         $_SESSION['slave_email'] = $row_for_slave['user_email'];
+//         $_SESSION['slave_id'] = $row_for_slave['user_id'];
+//         $_SESSION['slave_first_name'] = $row_for_slave['user_first_name'];
+//         $_SESSION['slave_last_name'] = $row_for_slave['user_last_name'];
+//         $_SESSION['slave_image'] = $row_for_slave['user_image'];
+//       }
+//     }
+//   } catch (Exception $e) {
+//     echo "Data insertion failed " . "<br>";
+//     // echo 'Message: ' . $e->getMessage() . "<br>";
+//   }
+// }
 ?>
 
 <!DOCTYPE html>
@@ -41,10 +41,10 @@ if (isset($_GET['slave_id']) && '' != $_GET['slave_id']) {
   <!-- Favicon -->
   <link rel="shortcut icon" href="../wp-content/uploads/data/favicon.png" />
   <!-- Style CSS -->
-  <link rel="stylesheet" href="css/stylesheet.css" />
-  <link rel="stylesheet" href="css/mmenu.css" />
-  <link rel="stylesheet" href="css/perfect-scrollbar.css" />
-  <link rel="stylesheet" href="css/style.css" id="colors" />
+  <link rel="stylesheet" href="../css/stylesheet.css" />
+  <link rel="stylesheet" href="../css/mmenu.css" />
+  <link rel="stylesheet" href="../css/perfect-scrollbar.css" />
+  <link rel="stylesheet" href="../css/style.css" id="colors" />
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&amp;display=swap&amp;subset=latin-ext,vietnamese" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800" rel="stylesheet" type="text/css" />
@@ -491,17 +491,17 @@ if (isset($_GET['slave_id']) && '' != $_GET['slave_id']) {
   </div>
 
   <!-- Scripts -->
-  <script src="scripts/jquery-3.4.1.min.js"></script>
-  <script src="scripts/chosen.min.js"></script>
-  <script src="scripts/perfect-scrollbar.min.js"></script>
-  <script src="scripts/slick.min.js"></script>
-  <script src="scripts/rangeslider.min.js"></script>
-  <script src="scripts/magnific-popup.min.js"></script>
-  <script src="scripts/jquery-ui.min.js"></script>
-  <script src="scripts/mmenu.js"></script>
-  <script src="scripts/tooltips.min.js"></script>
-  <script src="scripts/color_switcher.js"></script>
-  <script src="scripts/jquery_custom.js"></script>
+  <script src="../scripts/jquery-3.4.1.min.js"></script>
+  <script src="../scripts/chosen.min.js"></script>
+  <script src="../scripts/perfect-scrollbar.min.js"></script>
+  <script src="../scripts/slick.min.js"></script>
+  <script src="../scripts/rangeslider.min.js"></script>
+  <script src="../scripts/magnific-popup.min.js"></script>
+  <script src="../scripts/jquery-ui.min.js"></script>
+  <script src="../scripts/mmenu.js"></script>
+  <script src="../scripts/tooltips.min.js"></script>
+  <script src="../scripts/color_switcher.js"></script>
+  <script src="../scripts/jquery_custom.js"></script>
   <script>
     (function($) {
       try {

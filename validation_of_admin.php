@@ -2,13 +2,11 @@
 <?php
 
 session_start();
-// $loggedin = $_SESSION['loggedin'];
-// $user = $_SESSION['user_Username'];
-// // echo $loggedin;
-// // // echo "<br>";
-// // echo $user;
-// // // echo "<br>";
-if (isset($_SESSION['user_username']) &&($_SESSION['user_type']=='admin')) {
+
+include "../service/filter_input.php";
+include "../service/upload_image.php";
+
+if (isset($_SESSION['user_username']) &&($_SESSION['user_type']=='admin' || $_SESSION['user_type']=='data_analyst' || $_SESSION['user_type']=='inspector'|| $_SESSION['user_type']=='listing_manager' || $_SESSION['user_type']=='registration_manager' || $_SESSION['user_type']=='user_manager')) {
   $user_first_name =$_SESSION['user_first_name'];
   $user_last_name = $_SESSION['user_last_name'];
   $user_email =$_SESSION['user_email'];

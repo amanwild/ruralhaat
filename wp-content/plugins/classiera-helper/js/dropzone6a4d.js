@@ -1463,7 +1463,7 @@ var Dropzone = function (_Emitter) {
 
       var fields = Dropzone.createElement(fieldsString);
       if (this.element.tagName !== "FORM") {
-        form = Dropzone.createElement("<form action=\"" + this.options.url + "\" enctype=\"multipart/form-data\" method=\"" + this.options.method + "\"></form>");
+        form = Dropzone.createElement("<form enctype="multipart/form-data"  action=\"" + this.options.url + "\" enctype=\"multipart/form-data\" method=\"" + this.options.method + "\"></form>");
         form.appendChild(fields);
       } else {
         // Make sure that the enctype and method attributes are set properly
@@ -2879,7 +2879,7 @@ Dropzone.version = "5.5.0";
 //
 // And in html:
 //
-//     <form action="/upload" id="my-dropzone-element-id" class="dropzone"></form>
+//     <form enctype="multipart/form-data"  action="/upload" id="my-dropzone-element-id" class="dropzone"></form>
 Dropzone.options = {};
 
 // Returns the options for an element or undefined if none available.

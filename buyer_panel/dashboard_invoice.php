@@ -14,8 +14,8 @@
 <!-- Favicon -->
 <link rel="shortcut icon" href="images/favicon.png">
 <!-- Style CSS -->
-<link rel="stylesheet" href="css/bootstrap.php">
-<link rel="stylesheet" href="css/invoice.css">
+<link rel="stylesheet" href="../css/bootstrap.php">
+<link rel="stylesheet" href="../css/invoice.css">
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&amp;display=swap&amp;subset=latin-ext,vietnamese" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800" rel="stylesheet" type="text/css">

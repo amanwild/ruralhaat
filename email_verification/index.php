@@ -135,7 +135,7 @@ if (isset($_GET['email']) && isset($_GET['v_code'])) {
                     <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
                         <tr>
                             <td align="center" valign="top" style="padding: 36px 24px;">
-                                <a href="/author/index.html" target="_blank" style="display: inline-block;">
+                                <a href="../index.php" target="_blank" style="display: inline-block;">
                                     <img src='../wp-content/uploads/2021/12/logo-grid-3 (2).png' style='width:200px ; padding-right:10px;' alt=''> </a>
                             </td>
                         </tr>
@@ -234,5 +234,5 @@ if (isset($_GET['email']) && isset($_GET['v_code'])) {
 
 
 } else {
-    echo "<script>window.location.replace('welcome.php');</script>";
+    echo "<script>window.location.replace('../index.php');</script>";
 }

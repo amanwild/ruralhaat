@@ -3,9 +3,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-require('PHPMailer/Exception.php');
-require('PHPMailer/SMTP.php');
-require('PHPMailer/PHPMailer.php');
+require('../php_mailer_config/PHPMailer/Exception.php');
+require('../php_mailer_config/PHPMailer/SMTP.php');
+require('../php_mailer_config/PHPMailer/PHPMailer.php');
 
 function send_mail($email)
 {
@@ -39,7 +39,7 @@ function send_mail($email)
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Your Request for Ruralhaat Account Rejected';
+    $mail->Subject = 'Seller Account Request is Rejected from RURALHAAT';
     $mail->Body    = "<!DOCTYPE html>
     <html>
     
@@ -162,7 +162,7 @@ function send_mail($email)
                     <table border='0' cellpadding='0' cellspacing='0' width='100%' style='max-width: 600px;'>
                         <tr>
                             <td bgcolor='#ffffff' align='center' valign='top' style='padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;'>
-                                <h2 style='font-size: 40px; font-weight: 400; margin: 2;'>RURALHAAT</h2> <img src=' https://img.icons8.com/clouds/100/000000/handshake.png' width='125' height='120' style='display: block; border: 0px;' />
+                                <h2 style='font-size: 40px; font-weight: 400; margin: 2;'>RURALHAAT</h2> 
                             </td>
                         </tr>
                     </table>
@@ -184,7 +184,7 @@ function send_mail($email)
                                         <td bgcolor='#ffffff' align='center' style='padding: 20px 30px 60px 30px;'>
                                             <table border='0' cellspacing='0' cellpadding='0'>
                                                 <tr>
-                                                    <td align='center' style='border-radius: 3px;padding: 15px;' bgcolor='red'><span style='font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #5CB85C; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid red; display: inline-block;'>Your Account request for Seller is Rejected</span></td>
+                                                    <td align='center' style='border-radius: 3px;padding: 15px;' bgcolor='red'><span style='font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #5CB85C; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid red; display: inline-block;'>Your Account Request for Seller is Rejected</span></td>
                                                 </tr>
                                             </table>
                                         </td>

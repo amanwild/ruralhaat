@@ -13,12 +13,12 @@
   <title>My Listing</title>
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="images/favicon.png">
+  <link rel="shortcut icon" href="../wp-content/uploads/data/favicon.png" />
   <!-- Style CSS -->
-  <link rel="stylesheet" href="css/stylesheet.css">
-  <link rel="stylesheet" href="css/mmenu.css">
-  <link rel="stylesheet" href="css/perfect-scrollbar.css">
-  <link rel="stylesheet" href="css/style.css" id="colors">
+  <link rel="stylesheet" href="../css/stylesheet.css">
+  <link rel="stylesheet" href="../css/mmenu.css">
+  <link rel="stylesheet" href="../css/perfect-scrollbar.css">
+  <link rel="stylesheet" href="../css/style.css" id="colors">
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&amp;display=swap&amp;subset=latin-ext,vietnamese" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800" rel="stylesheet" type="text/css">
@@ -222,13 +222,13 @@
                           </div>
                           <div class=" col-md-6 text-right" style="float:right;margin-left:auto;">
 
-                            <form method="GET" style="display:inline-block" action="./dashboard_edit_listing.php">
+                            <form enctype="multipart/form-data"  method="GET" style="display:inline-block" action="./dashboard_edit_listing.php">
                               <input type="hidden" id="edit_listing_listing_id" name="edit_listing_listing_id" value="<?= $listing_id ?>" />
                               <button type="submit" id="<?= $listing_id ?>" class="edit button gray"><i class="fa fa-pencil"></i> Edit</button>
 
 
                             </form>
-                            <form onsubmit="return confirm('Are you sure? you want to Delete Listing!');" method="POST" style="display:inline-block" action="<?= $_SERVER["REQUEST_URI"]; ?>">
+                            <form enctype="multipart/form-data"  onsubmit="return confirm('Are you sure? you want to Delete Listing!');" method="POST" style="display:inline-block" action="<?= $_SERVER["REQUEST_URI"]; ?>">
                               <input type="hidden" id="listing_id" name="listing_id" value="<?= $listing_id ?>" />
                               <input type="hidden" id="delete_listing" name="delete_listing" value="true" />
 
@@ -421,17 +421,17 @@
   </div>
 
   <!-- Scripts -->
-  <script src="scripts/jquery-3.4.1.min.js"></script>
-  <script src="scripts/chosen.min.js"></script>
-  <script src="scripts/perfect-scrollbar.min.js"></script>
-  <script src="scripts/slick.min.js"></script>
-  <script src="scripts/rangeslider.min.js"></script>
-  <script src="scripts/magnific-popup.min.js"></script>
-  <script src="scripts/jquery-ui.min.js"></script>
-  <script src="scripts/mmenu.js"></script>
-  <script src="scripts/tooltips.min.js"></script>
-  <script src="scripts/color_switcher.js"></script>
-  <script src="scripts/jquery_custom.js"></script>
+  <script src="../scripts/jquery-3.4.1.min.js"></script>
+  <script src="../scripts/chosen.min.js"></script>
+  <script src="../scripts/perfect-scrollbar.min.js"></script>
+  <script src="../scripts/slick.min.js"></script>
+  <script src="../scripts/rangeslider.min.js"></script>
+  <script src="../scripts/magnific-popup.min.js"></script>
+  <script src="../scripts/jquery-ui.min.js"></script>
+  <script src="../scripts/mmenu.js"></script>
+  <script src="../scripts/tooltips.min.js"></script>
+  <script src="../scripts/color_switcher.js"></script>
+  <script src="../scripts/jquery_custom.js"></script>
   <script>
     (function($) {
       try {

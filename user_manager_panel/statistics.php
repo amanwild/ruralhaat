@@ -24,8 +24,8 @@
   <link rel='dns-prefetch' href='http://maps.googleapis.com/' />
   <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
   <link rel='preconnect' href='https://fonts.gstatic.com/' crossorigin />
-  <link rel="alternate" type="application/rss+xml" title="Classiera Classifieds Ads WordPress Theme &raquo; Feed" href="../feed/index.html" />
-  <link rel="alternate" type="application/rss+xml" title="Classiera Classifieds Ads WordPress Theme &raquo; Comments Feed" href="../comments/feed/index.html" />
+  <link rel="alternate" type="application/rss+xml" title="  &raquo; Feed" href="../feed/index.html" />
+  <link rel="alternate" type="application/rss+xml" title="  &raquo; Comments Feed" href="../comments/feed/index.html" />
   <link rel='stylesheet' id='wp-block-library-css' href='../wp-includes/css/dist/block-library/style.min6a4d.css?ver=6.1.1' type='text/css' media='all' />
   <link rel='stylesheet' id='wc-blocks-vendors-style-css' href='../wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style556e.css?ver=9.4.4' type='text/css' media='all' />
   <link rel='stylesheet' id='wc-blocks-style-css' href='../wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style556e.css?ver=9.4.4' type='text/css' media='all' />
@@ -1471,32 +1471,32 @@
 
 
     .wp-block-columns[class*="fullwidth-cols"] {
-      /* no suggestion */
+      
       margin-bottom: unset !important;
     }
 
     .wp-block-column.editor\:pointer-events-none {
-      /* no suggestion */
+      
       margin-top: 0 !important;
       margin-bottom: 0 !important;
     }
 
     .is-root-container.block-editor-block-list__layout>[data-align="full"]:not(:first-of-type)>.wp-block-column.editor\:pointer-events-none,
     .is-root-container.block-editor-block-list__layout>[data-align="wide"]>.wp-block-column.editor\:pointer-events-none {
-      /* no suggestion */
+      
       margin-top: calc(-1 * var(--wp--style--block-gap, 28px)) !important;
     }
 
     .is-root-container.block-editor-block-list__layout>[data-align="full"]:not(:first-of-type)>.ext-my-0,
     .is-root-container.block-editor-block-list__layout>[data-align="wide"]>.ext-my-0:not([style*="margin"]) {
-      /* no suggestion */
+      
       margin-top: calc(-1 * var(--wp--style--block-gap, 28px)) !important;
     }
 
-    /* Some popular themes use padding instead of core margin for columns; remove it */
+    
 
     .ext .wp-block-columns .wp-block-column[style*="padding"] {
-      /* no suggestion */
+      
       padding-left: 0 !important;
       padding-right: 0 !important;
     }
@@ -1504,13 +1504,13 @@
     /* Some popular themes add double spacing between columns; remove it */
 
     .ext .wp-block-columns+.wp-block-columns:not([class*="mt-"]):not([class*="my-"]):not([style*="margin"]) {
-      /* no suggestion */
+      
       margin-top: 0 !important;
     }
 
     [class*="fullwidth-cols"] .wp-block-column:first-child,
     [class*="fullwidth-cols"] .wp-block-group:first-child {
-      /* no suggestion */
+      
     }
 
     [class*="fullwidth-cols"] .wp-block-column:first-child,
@@ -1520,7 +1520,7 @@
 
     [class*="fullwidth-cols"] .wp-block-column:last-child,
     [class*="fullwidth-cols"] .wp-block-group:last-child {
-      /* no suggestion */
+      
     }
 
     [class*="fullwidth-cols"] .wp-block-column:last-child,
@@ -1529,35 +1529,35 @@
     }
 
     [class*="fullwidth-cols"] .wp-block-column:first-child>* {
-      /* no suggestion */
+      
       margin-top: 0 !important;
     }
 
     [class*="fullwidth-cols"] .wp-block-column>*:first-child {
-      /* no suggestion */
+      
       margin-top: 0 !important;
     }
 
     [class*="fullwidth-cols"] .wp-block-column>*:last-child {
-      /* no suggestion */
+      
       margin-bottom: 0 !important;
     }
 
     .ext .is-not-stacked-on-mobile .wp-block-column {
-      /* no suggestion */
+      
       margin-bottom: 0 !important;
     }
 
     /* Add base margin bottom to all columns */
 
     .wp-block-columns[class*="fullwidth-cols"]:not(.is-not-stacked-on-mobile)>.wp-block-column:not(:last-child) {
-      /* no suggestion */
+      
       margin-bottom: var(--wp--style--block-gap, 1.75rem) !important;
     }
 
     @media (min-width: 782px) {
       .wp-block-columns[class*="fullwidth-cols"]:not(.is-not-stacked-on-mobile)>.wp-block-column:not(:last-child) {
-        /* no suggestion */
+        
         margin-bottom: 0 !important;
       }
     }
@@ -1565,13 +1565,13 @@
     /* Remove margin bottom from "not-stacked" columns */
 
     .wp-block-columns[class*="fullwidth-cols"].is-not-stacked-on-mobile>.wp-block-column {
-      /* no suggestion */
+      
       margin-bottom: 0 !important;
     }
 
     @media (min-width: 600px) and (max-width: 781px) {
       .wp-block-columns[class*="fullwidth-cols"]:not(.is-not-stacked-on-mobile)>.wp-block-column:nth-child(even) {
-        /* no suggestion */
+        
         margin-left: var(--wp--style--block-gap, 2em) !important;
       }
     }
@@ -1589,7 +1589,7 @@
       }
 
       .tablet\:fullwidth-cols.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column:not([style*="margin"]) {
-        /* no suggestion */
+        
         margin-left: 0 !important;
       }
 
@@ -1609,7 +1609,7 @@
       }
 
       .desktop\:fullwidth-cols.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column:not([style*="margin"]) {
-        /* no suggestion */
+        
         margin-left: 0 !important;
       }
 
@@ -1638,7 +1638,7 @@
     }
 
     .is-style-inline-list li {
-      /* no suggestion */
+      
       list-style-type: none !important;
     }
 
@@ -1650,7 +1650,7 @@
     }
 
     .is-style-inline-list li:first-child {
-      /* no suggestion */
+      
     }
 
     @media (min-width: 782px) {
@@ -1660,7 +1660,7 @@
     }
 
     .is-style-inline-list li:last-child {
-      /* no suggestion */
+      
     }
 
     @media (min-width: 782px) {
@@ -1725,7 +1725,7 @@
     }
 
     .is-style-angled {
-      /* no suggestion */
+      
       align-items: center !important;
       justify-content: flex-end !important;
     }
@@ -1736,7 +1736,7 @@
 
     .is-style-angled .wp-block-cover__image-background,
     .is-style-angled .wp-block-cover__video-background {
-      /* no suggestion */
+      
       -webkit-clip-path: polygon(0 0, 30% 0%, 50% 100%, 0% 100%) !important;
       clip-path: polygon(0 0, 30% 0%, 50% 100%, 0% 100%) !important;
       z-index: 1 !important;
@@ -1746,49 +1746,49 @@
 
       .is-style-angled .wp-block-cover__image-background,
       .is-style-angled .wp-block-cover__video-background {
-        /* no suggestion */
+        
         -webkit-clip-path: polygon(0 0, 55% 0%, 65% 100%, 0% 100%) !important;
         clip-path: polygon(0 0, 55% 0%, 65% 100%, 0% 100%) !important;
       }
     }
 
     .has-foreground-color {
-      /* no suggestion */
+      
       color: var(--wp--preset--color--foreground, #000) !important;
     }
 
     .has-foreground-background-color {
-      /* no suggestion */
+      
       background-color: var(--wp--preset--color--foreground, #000) !important;
     }
 
     .has-background-color {
-      /* no suggestion */
+      
       color: var(--wp--preset--color--background, #fff) !important;
     }
 
     .has-background-background-color {
-      /* no suggestion */
+      
       background-color: var(--wp--preset--color--background, #fff) !important;
     }
 
     .has-primary-color {
-      /* no suggestion */
+      
       color: var(--wp--preset--color--primary, #4b5563) !important;
     }
 
     .has-primary-background-color {
-      /* no suggestion */
+      
       background-color: var(--wp--preset--color--primary, #4b5563) !important;
     }
 
     .has-secondary-color {
-      /* no suggestion */
+      
       color: var(--wp--preset--color--secondary, #9ca3af) !important;
     }
 
     .has-secondary-background-color {
-      /* no suggestion */
+      
       background-color: var(--wp--preset--color--secondary, #9ca3af) !important;
     }
 
@@ -1801,28 +1801,28 @@
     .ext.has-text-color h4,
     .ext.has-text-color h5,
     .ext.has-text-color h6 {
-      /* no suggestion */
+      
       color: currentColor !important;
     }
 
     .has-white-color {
-      /* no suggestion */
+      
       color: var(--wp--preset--color--white, #fff) !important;
     }
 
     .has-black-color {
-      /* no suggestion */
+      
       color: var(--wp--preset--color--black, #000) !important;
     }
 
     .has-ext-foreground-background-color {
-      /* no suggestion */
+      
       background-color: var(--wp--preset--color--foreground,
           var(--wp--preset--color--black, #000)) !important;
     }
 
     .has-ext-primary-background-color {
-      /* no suggestion */
+      
       background-color: var(--wp--preset--color--primary,
           var(--wp--preset--color--cyan-bluish-gray, #000)) !important;
     }
@@ -1830,39 +1830,39 @@
     /* Fix button borders with specified background colors */
 
     .wp-block-button__link.has-black-background-color {
-      /* no suggestion */
+      
       border-color: var(--wp--preset--color--black, #000) !important;
     }
 
     .wp-block-button__link.has-white-background-color {
-      /* no suggestion */
+      
       border-color: var(--wp--preset--color--white, #fff) !important;
     }
 
     .has-ext-small-font-size {
-      /* no suggestion */
+      
       font-size: var(--wp--preset--font-size--ext-small) !important;
     }
 
     .has-ext-medium-font-size {
-      /* no suggestion */
+      
       font-size: var(--wp--preset--font-size--ext-medium) !important;
     }
 
     .has-ext-large-font-size {
-      /* no suggestion */
+      
       font-size: var(--wp--preset--font-size--ext-large) !important;
       line-height: 1.2 !important;
     }
 
     .has-ext-x-large-font-size {
-      /* no suggestion */
+      
       font-size: var(--wp--preset--font-size--ext-x-large) !important;
       line-height: 1 !important;
     }
 
     .has-ext-xx-large-font-size {
-      /* no suggestion */
+      
       font-size: var(--wp--preset--font-size--ext-xx-large) !important;
       line-height: 1 !important;
     }
@@ -1870,12 +1870,12 @@
     /* Line height */
 
     .has-ext-x-large-font-size:not([style*="line-height"]) {
-      /* no suggestion */
+      
       line-height: 1.1 !important;
     }
 
     .has-ext-xx-large-font-size:not([style*="line-height"]) {
-      /* no suggestion */
+      
       line-height: 1.1 !important;
     }
 
@@ -1908,7 +1908,7 @@
     /* Classic themes use an inner [class*="_inner-container"] that our utilities cannot directly target, so we need to do so with a few */
 
     .ext .ext-grid>[class*="_inner-container"] {
-      /* no suggestion */
+      
       display: grid !important;
     }
 
@@ -1916,116 +1916,116 @@
 
     .ext>[class*="_inner-container"]>.ext-grid:not([class*="columns"]),
     .ext>[class*="_inner-container"]>.wp-block>.ext-grid:not([class*="columns"]) {
-      /* no suggestion */
+      
       display: initial !important;
     }
 
     /* Grid Columns */
 
     .ext .ext-grid-cols-1>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-cols-2>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-cols-3>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-cols-4>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-cols-5>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-cols-6>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-cols-7>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-cols-8>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-cols-9>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-columns: repeat(9, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-cols-10>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-columns: repeat(10, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-cols-11>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-columns: repeat(11, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-cols-12>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-cols-13>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-columns: repeat(13, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-cols-none>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-columns: none !important;
     }
 
     /* Grid Rows */
 
     .ext .ext-grid-rows-1>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-rows: repeat(1, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-rows-2>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-rows: repeat(2, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-rows-3>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-rows: repeat(3, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-rows-4>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-rows: repeat(4, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-rows-5>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-rows: repeat(5, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-rows-6>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-rows: repeat(6, minmax(0, 1fr)) !important;
     }
 
     .ext .ext-grid-rows-none>[class*="_inner-container"] {
-      /* no suggestion */
+      
       grid-template-rows: none !important;
     }
 
@@ -2052,19 +2052,19 @@
     }
 
     .ext.wp-block-group>*:last-child {
-      /* no suggestion */
+      
       margin-bottom: 0 !important;
     }
 
     /* For <5.9 */
 
     .ext .wp-block-group__inner-container {
-      /* no suggestion */
+      
       padding: 0 !important;
     }
 
     .ext.has-background {
-      /* no suggestion */
+      
       padding-left: var(--wp--style--block-gap, 1.75rem) !important;
       padding-right: var(--wp--style--block-gap, 1.75rem) !important;
     }
@@ -2073,13 +2073,13 @@
 
     .ext *[class*="inner-container"]>.alignwide *[class*="inner-container"],
     .ext *[class*="inner-container"]>[data-align="wide"] *[class*="inner-container"] {
-      /* no suggestion */
+      
       max-width: var(--responsive--alignwide-width, 120rem) !important;
     }
 
     .ext *[class*="inner-container"]>.alignwide *[class*="inner-container"]>*,
     .ext *[class*="inner-container"]>[data-align="wide"] *[class*="inner-container"]>* {
-      /* no suggestion */
+      
     }
 
     .ext *[class*="inner-container"]>.alignwide *[class*="inner-container"]>*,
@@ -2090,19 +2090,19 @@
     /* Ensure image block display is standardized */
 
     .ext .wp-block-image {
-      /* no suggestion */
+      
       position: relative !important;
       text-align: center !important;
     }
 
     .ext .wp-block-image img {
-      /* no suggestion */
+      
       display: inline-block !important;
       vertical-align: middle !important;
     }
 
     body {
-      /* no suggestion */
+      
       /* We need to abstract this out of tailwind.config because clamp doesnt translate with negative margins */
       --extendify--spacing--large: var(--wp--custom--spacing--large,
           clamp(2em, 8vw, 8em)) !important;
@@ -2124,19 +2124,19 @@
     /* Astra: Remove spacer block visuals in the library */
 
     .block-editor-block-preview__content-iframe .ext [data-type="core/spacer"] .components-resizable-box__container {
-      /* no suggestion */
+      
       background: transparent !important;
     }
 
     .block-editor-block-preview__content-iframe .ext [data-type="core/spacer"] .block-library-spacer__resize-container::before {
-      /* no suggestion */
+      
       display: none !important;
     }
 
     /* Twenty Twenty adds a lot of margin automatically to blocks. We only want our own margin added to our patterns. */
 
     .ext .wp-block-group__inner-container figure.wp-block-gallery.alignfull {
-      /* no suggestion */
+      
       margin-top: unset !important;
       margin-bottom: unset !important;
     }
@@ -2144,7 +2144,7 @@
     /* Ensure no funky business is assigned to alignwide */
 
     .ext .alignwide {
-      /* no suggestion */
+      
       margin-left: auto !important;
       margin-right: auto !important;
     }
@@ -2153,53 +2153,53 @@
 
     .is-root-container.block-editor-block-list__layout>[data-align="full"]:not(:first-of-type)>.ext-my-0,
     .is-root-container.block-editor-block-list__layout>[data-align="wide"]>.ext-my-0:not([style*="margin"]) {
-      /* no suggestion */
+      
       margin-top: calc(-1 * var(--wp--style--block-gap, 28px)) !important;
     }
 
     /* Ensure vh content in previews looks taller */
 
     .block-editor-block-preview__content-iframe .preview\:min-h-50 {
-      /* no suggestion */
+      
       min-height: 50vw !important;
     }
 
     .block-editor-block-preview__content-iframe .preview\:min-h-60 {
-      /* no suggestion */
+      
       min-height: 60vw !important;
     }
 
     .block-editor-block-preview__content-iframe .preview\:min-h-70 {
-      /* no suggestion */
+      
       min-height: 70vw !important;
     }
 
     .block-editor-block-preview__content-iframe .preview\:min-h-80 {
-      /* no suggestion */
+      
       min-height: 80vw !important;
     }
 
     .block-editor-block-preview__content-iframe .preview\:min-h-100 {
-      /* no suggestion */
+      
       min-height: 100vw !important;
     }
 
     /*  Removes excess margin when applied to the alignfull parent div in Block Themes */
 
     .ext-mr-0.alignfull:not([style*="margin"]):not([style*="margin"]) {
-      /* no suggestion */
+      
       margin-right: 0 !important;
     }
 
     .ext-ml-0:not([style*="margin"]):not([style*="margin"]) {
-      /* no suggestion */
+      
       margin-left: 0 !important;
     }
 
     /*  Ensures fullwidth blocks display properly in the editor when margin is zeroed out */
 
     .is-root-container .wp-block[data-align="full"]>.ext-mx-0:not([style*="margin"]):not([style*="margin"]) {
-      /* no suggestion */
+      
       margin-right: calc(1 * var(--wp--custom--spacing--outer, 0)) !important;
       margin-left: calc(1 * var(--wp--custom--spacing--outer, 0)) !important;
       overflow: hidden !important;

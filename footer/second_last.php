@@ -4,7 +4,7 @@
       <div class="col-lg-3 col-sm-6 match-height">
         <div class="widget-box">
           <div class="widget-title">
-            <img class="img-responsive" src="../wp-content/uploads/2018/11/classiera-plum-logo.png" alt="Classiera Classifieds Ads WordPress Theme">
+            <img class="img-responsive" src="../wp-content/uploads/2018/11/classiera-plum-logo.png" alt=" ">
           </div>
           <div class="widget-content">
             <div class="textwidget">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look.</div>

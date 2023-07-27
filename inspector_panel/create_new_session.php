@@ -3,12 +3,7 @@
 
 include "../db.php";
 
-function filter($string)
-{
-    $string = str_replace("<", "&lt;", $string);
-    $string = str_replace(">", "&gt;", $string);
-    return $string;
-}
+
 
 if (($_SERVER["REQUEST_METHOD"] == "POST") && isset($_POST['submit'])) {
 

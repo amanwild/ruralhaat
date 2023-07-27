@@ -3,37 +3,37 @@
 jQuery(document).ready(function($) {
 	
 	$("#color_switcher_preview .stylesheet" ).click(function(){
-		$("#colors" ).attr("href", "css/colors_version/style.css" );
+		$("#colors" ).attr("href", "../css/colors_version/style.css" );
 		return false;
 	});
 
 	$("#color_switcher_preview .stylesheet_1" ).click(function(){
-		$("#colors" ).attr("href", "css/colors_version/stylesheet_1.css" );
+		$("#colors" ).attr("href", "../css/colors_version/stylesheet_1.css" );
 		return false;
 	});
 	
 	$("#color_switcher_preview .stylesheet_2" ).click(function(){
-		$("#colors" ).attr("href", "css/colors_version/stylesheet_2.css" );
+		$("#colors" ).attr("href", "../css/colors_version/stylesheet_2.css" );
 		return false;
 	});
 	
 	$("#color_switcher_preview .stylesheet_3" ).click(function(){
-		$("#colors" ).attr("href", "css/colors_version/stylesheet_3.css" );
+		$("#colors" ).attr("href", "../css/colors_version/stylesheet_3.css" );
 		return false;
 	});
 	
 	$("#color_switcher_preview .stylesheet_4" ).click(function(){
-		$("#colors" ).attr("href", "css/colors_version/stylesheet_4.css" );
+		$("#colors" ).attr("href", "../css/colors_version/stylesheet_4.css" );
 		return false;
 	});
 	
 	$("#color_switcher_preview .stylesheet_5" ).click(function(){
-		$("#colors" ).attr("href", "css/colors_version/stylesheet_5.css" );
+		$("#colors" ).attr("href", "../css/colors_version/stylesheet_5.css" );
 		return false;
 	});
 	
 	$("#color_switcher_preview .stylesheet_6" ).click(function(){
-		$("#colors" ).attr("href", "css/colors_version/stylesheet_6.css" );
+		$("#colors" ).attr("href", "../css/colors_version/stylesheet_6.css" );
 		return false;
 	});	
 	
@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
 	$("#reset a").click(function(e){
 		e.preventDefault();
 		$(".colors li a" ).removeClass("active");
-		$("#colors" ).attr("href", "css/colors/style.css" );
+		$("#colors" ).attr("href", "../css/colors/style.css" );
 		$(window).resize();
 	});
 	

@@ -6,6 +6,8 @@ include "../db.php";
 // foreach ($_POST as $key => $value) {
 //   echo "Field ".htmlspecialchars($key)." is ".htmlspecialchars($value)."<br>";
 // }
+include "../service/filter_input.php";
+
 require "email_verification_shooting.php";
 
 echo json_encode($_POST);

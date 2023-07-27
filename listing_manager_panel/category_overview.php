@@ -7,7 +7,7 @@
                     <div class="card mb-4">
                         <div class="card-body text-center">
                             <div class="card-body text-center">
-                                <form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post" enctype="multipart/form-data">
+                                <form enctype="multipart/form-data"  action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post" enctype="multipart/form-data">
 
                                     <label for="file-upload" class="custom-file-upload p-4">
 
@@ -18,7 +18,7 @@
                                     </label>
                                     <div class="row justify-content-center text-align-center mt-2">
                                         <div class="col-md-6 mb-3 my-auto ">
-                                            <form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post" enctype="multipart/form-data">
+                                            <form enctype="multipart/form-data"  action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post" enctype="multipart/form-data">
                                                 <input type="hidden" class="set_profile_image" id="set_profile_image" name="set_profile_image">
                                                 <script>
                                                     set_profile_image.value = true;
@@ -41,7 +41,7 @@
                                             <?php
                                             if ($_SESSION['user_img_url'] !== "dummy_profile_img.webp") {
 
-                                                echo '<form action=" ' . $_SERVER["REQUEST_URI"] . '" method="post">
+                                                echo '<form enctype="multipart/form-data"  action=" ' . $_SERVER["REQUEST_URI"] . '" method="post">
                                                 <input type="hidden" class="set_profile_image" id="set_profile_image" name="set_profile_image">
                                                 <script>
                                                     set_profile_image.value = true;

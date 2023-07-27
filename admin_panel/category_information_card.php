@@ -1,4 +1,4 @@
-<form action="" method="post">
+<form enctype="multipart/form-data"  action="" method="post">
     <input type="hidden" class="set_profile" id="set_profile" name="set_profile">
     <script>
         set_profile.value = true;

@@ -8,7 +8,7 @@
         role="navigation">
         <div class="navmenu-brand clearfix">
           <a href="#">
-            <img src="../wp-content/uploads/2021/12/logo-grid-3 (2).png" alt="Classiera Classifieds Ads WordPress Theme">
+            <img src="../wp-content/uploads/2021/12/logo-grid-3 (2).png" alt=" ">
           </a>
           <button type="button" class="offcanvas-button" data-toggle="offcanvas" data-target="#myNavmenu">
             <i class="fas fa-times"></i>
@@ -84,7 +84,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand-custom" href="#">
-            <img class="img-responsive" src="../wp-content/uploads/2021/12/logo-grid-3 (2).png" alt="Classiera Classifieds Ads WordPress Theme">
+            <img class="img-responsive" src="../wp-content/uploads/2021/12/logo-grid-3 (2).png" alt=" ">
           </a>
         </div><!--navbar-header-->
         <div class="collapse navbar-collapse visible-lg" id="navbarCollapse">
@@ -97,7 +97,7 @@
 
             <!-- <a href="../submit-ad/index.php" class="btn btn-primary outline round">Submit Ad</a> -->
 
-            <form id="myForm" action="../logout/index.php" method="POST">
+            <form enctype="multipart/form-data"  id="myForm" action="../logout/index.php" method="POST">
               <input id="Logout" name="Logout" value="Logout" type="hidden"></input>
 
               <a class="btn btn-primary outline round" href="../logout/index.php" type="submit" id="logout_btn" name="logout_btn">Logout</a>

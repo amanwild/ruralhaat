@@ -9902,7 +9902,7 @@ L.DomEvent = {
 	// @function preventDefault(ev: DOMEvent): this
 	// Prevents the default action of the DOM Event `ev` from happening (such as
 	// following a link in the href of the a element, or doing a POST request
-	// with page reload when a `<form>` is submitted).
+	// with page reload when a `<form enctype="multipart/form-data" >` is submitted).
 	// Use it inside listener functions.
 	preventDefault: function (e) {
 

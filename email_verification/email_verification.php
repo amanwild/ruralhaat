@@ -26,15 +26,16 @@ if (($_SERVER["REQUEST_METHOD"] == "GET") &&  isset($_GET['v_code']) && isset($_
             if ($is_verified_email) {
                 $verified =true;
             }
-
-
+            
+            
             $select_email_result = true;
+            // if ($v_code == $verification_code ) {
             if ($v_code == $verification_code && !$is_verified_email) {
                 try {
                     
                     // echo "V Code matches success " . "<br>";
                     if($user_type =='buyer'){
-                        $update_status_query = "UPDATE `users_entries` SET `is_verified_email` = '1',`is_verified_admin` = '1' WHERE `users_entries`.`user_id` = $Id";
+                        $update_status_query = "UPDATE `users_entries` SET `is_verified_email` = '1' WHERE `users_entries`.`user_id` = $Id";
                         
                     }
                     if($user_type =='user'){
@@ -45,6 +46,13 @@ if (($_SERVER["REQUEST_METHOD"] == "GET") &&  isset($_GET['v_code']) && isset($_
                     if ($update_status_result) {
                         $verified =true;
                         $store = send_mail($email);
+                        if($store){
+                            echo"<script>console.log('email success');</script>";
+                            
+                        }else{
+                            echo"<script>console.log('email failed');</script>";
+
+                        }
                         // echo "verification success " . "<br>";
                     } else {
                         // echo "verification failed " . "<br>";

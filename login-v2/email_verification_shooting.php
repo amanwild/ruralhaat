@@ -6,9 +6,9 @@ use PHPMailer\PHPMailer\Exception;
 
 function send_mail($email, $v_code)
 {
-  require('PHPMailer/Exception.php');
-  require('PHPMailer/SMTP.php');
-  require('PHPMailer/PHPMailer.php');
+  require('../php_mailer_config/PHPMailer/Exception.php');
+  require('../php_mailer_config/PHPMailer/SMTP.php');
+  require('../php_mailer_config/PHPMailer/PHPMailer.php');
 
   $mail = new PHPMailer(true);
 
@@ -179,7 +179,7 @@ function send_mail($email, $v_code)
                         </tr>
                         <tr>
                             <td align='left' bgcolor='#ffffff' style='padding: 24px; font-family: ' Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;'>
-                                <p style='margin: 0;'>Tap the button below to confirm your email address. If you didn't create an account with <a href='http://localhost:8080/author/index.html'>RURALHAAT</a>, you can safely delete this email.</p>
+                                <p style='margin: 0;'>Tap the button below to confirm your email address. If you didn't create an account with <a href='http://ruralhaat.org.in/index.php'>RURALHAAT</a>, you can safely delete this email.</p>
                             </td>
                         </tr>
                         <tr>
@@ -189,7 +189,7 @@ function send_mail($email, $v_code)
                                         <td bgcolor='#ffffff' align='center' style='padding: 20px 30px 60px 30px;'>
                                             <table border='0' cellspacing='0' cellpadding='0'>
                                                 <tr>
-                                                    <td align='center' style='border-radius: 3px;padding: 15px;' bgcolor='red'><a href='http://localhost:8080/author/email_verification/index.php?email=$email&v_code=$v_code' target='_blank' style='font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid red; display: inline-block;'>Confirm Email</a></td>
+                                                    <td align='center' style='border-radius: 3px;padding: 15px;' bgcolor='red'><a href='http://ruralhaat.org.in/email_verification/index.php?email=$email&v_code=$v_code' target='_blank' style='font-size: 20px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 15px 25px; border-radius: 2px; border: 1px solid red; display: inline-block;'>Confirm Email</a></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -204,7 +204,7 @@ function send_mail($email, $v_code)
                         </tr> <!-- COPY -->
                         <tr>
                             <td bgcolor='#ffffff' align='left' style='padding: 20px 30px 20px 30px; color: #666666; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 18px; font-weight: 400; line-height: 25px;'>
-                                <p style='margin: 0;padding: 15px;'><a href='#' target='_blank' style='color: red;'>http://localhost:8080/author/email_verification/index.php?email=$email&v_code=$v_code</a></p>
+                                <p style='margin: 0;padding: 15px;'><a href='#' target='_blank' style='color: red;'>http://ruralhaat.org.in/email_verification/index.php?email=$email&v_code=$v_code</a></p>
                             </td>
                         </tr>
                         <tr>
