@@ -4685,11 +4685,11 @@
                   </div>
                 </div><!--Message Div-->
                 <div class="form-group col-sm-12">
-                  <div class="inner-addon left-addon">
+                  <!-- <div class="inner-addon left-addon">
                     <h3>
                       Human test. Please input the result of 6&nbsp; + 6 </h3>
                   </div>
-                </div>
+                </div> -->
                 <div class="form-group col-sm-6">
                   <label class="text-capitalize" for="humanTest">Security Question : <span
                       class="text-danger">*</span></label>
@@ -4702,7 +4702,7 @@
                   </div>
                 </div><!--Question Div-->
                 <!--Agree-->
-                <div class="form-group col-sm-12">
+                <!-- <div class="form-group col-sm-12">
                   <div class="inner-addon left-addon">
                     <div class="checkbox">
                       <input type="checkbox" name="remember" id="remember" value="forever" required>
@@ -4712,7 +4712,7 @@
                       </label>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!--Agree-->
               </div><!--form-inline row-->
             </div><!--form-group-->

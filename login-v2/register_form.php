@@ -8,7 +8,6 @@
           <div class="row">
             <div class="col-lg-12">
 
-
               <div class="classiera-login-register-heading border-bottom text-center">
                 <h3 class="text-uppercase">Register Here</h3>
               </div>
@@ -63,75 +62,32 @@
             <div class="social-login-v2">
               <!-- <h5 class="text-uppercase"><b>Register an Account</b></h5> -->
             </div>
-            <form enctype="multipart/form-data"  id="registration_form" class="text-center">
+            <form enctype="multipart/form-data" id="verify_phone_for_register" class="text-center">
 
-            <div class="form-group">
-                <div class="inner-addon left-addon" style="">
 
-                  <p>Please select User Type :</p>
-                  <input type="radio" id="user" name="user_type" value="user" required>
-                  <label for="user">Supplier</label>
-                  <input type="radio" id="buyer" name="user_type" value="buyer" required>
-                  <label for="buyer">Buyer</label>
-
+              <?php echo "<h4 style='color:red;' id='label_for_phone_validation'></h4>"; ?>
+              <div class="form-group">
+                <div class="inner-addon left-addon">
+                  <i class="left-addon form-icon fas fa-user"></i>
+                   <input type="tel" pattern="[0-9]{10}"  onchange="validation_for_email_username_phone()" onload="validation_for_email_username_phone()" name="verify_phone" id="verify_phone" class="form-control form-control-md sharp-edge" placeholder="Phone no." data-error="Phone no. required" required>
                   <div class="help-block with-errors"></div>
                 </div>
-              </div><!--register_last_name-->
-
-              <?php echo "<h4 style='color:red;' id='label_for_username_validation'></h4>"; ?>
+              </div><!--username-->
 
               <div class="form-group">
                 <div class="inner-addon left-addon">
                   <i class="left-addon form-icon fas fa-user"></i>
-                  <input type="text" onchange="validation_for_email_username_phone()" onload="validation_for_email_username_phone()" name="register_username" id="register_username" class="form-control form-control-md sharp-edge" placeholder="Enter username" data-error="Username required" required>
+                  <input type="text" onchange="validation_for_email_username_phone()" onload="validation_for_email_username_phone()" name="verify_phone_otp" id="verify_phone_otp" class="form-control form-control-md sharp-edge" placeholder="Enter OTP" data-error="Enter OTP" required>
                   <div class="help-block with-errors"></div>
                 </div>
               </div><!--username-->
-              <div class="form-group">
-                <div class="inner-addon left-addon">
-                  <i class="left-addon form-icon fas fa-">F</i>
-                  <input type="text" name="register_first_name" id="register_first_name" class="form-control form-control-md sharp-edge" placeholder="Enter First name" data-error="First name required" required>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div><!--register_first_name-->
 
-              <div class="form-group">
-                <div class="inner-addon left-addon">
-                  <i class="left-addon form-icon fas fa-">L</i>
-                  <input type="text" name="register_last_name" id="register_last_name" class="form-control form-control-md sharp-edge" placeholder="Enter Last name" data-error="Last name required" required>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div><!--register_last_name-->
+ 
+           
+
 
              
-              <?php echo "<h4 style='color:red;' id='label_for_email_validation'></h4>"; ?>
 
-              <div class="form-group">
-                <div class="inner-addon left-addon">
-                  <i class="left-addon form-icon fas fa-envelope"></i>
-                  <input type="email" name="register_email" onchange="validation_for_email_username_phone()" onload="validation_for_email_username_phone()" id="register_email" class="form-control form-control-md sharp-edge" placeholder="Enter email address" data-error="Email required" required>
-                  <div class="help-block with-errors"></div>
-                </div>
-              </div><!--Email Address-->
-
-              <?php echo "<h4 style='color:red;' id='label_for_phone_validation'></h4>"; ?>
-
-              <div class="form-group">
-                <div class="inner-addon left-addon">
-                  <i class="left-addon form-icon fas fa-phone"></i>
-                  <input type="tel" pattern="[0-9]{10}" name="register_phone" onchange="validation_for_email_username_phone()" onload="validation_for_email_username_phone()" id="register_phone" class="form-control form-control-md sharp-edge" placeholder="Enter Phone no." data-error="Phone required" required>
-                  <div class="help-block with-errors">Enter 10 digit Phone no.</div>
-                </div>
-              </div><!--Phone no.-->
-            
-
-              <div class="form-group">
-                <div class="checkbox">
-                  <input type="checkbox" id="agree" data-error="You must agree to our Terms and Conditions" required>
-                  <label for="agree">Agree to <a href="#" target="_blank">Terms &amp; Conditions</a></label>
-                  <div class="left-side help-block with-errors"></div>
-                </div>
-              </div><!--Agreed-->
 
               <div class="form-group">
                 <div class="checkbox">
@@ -144,8 +100,11 @@
               <div class="form-group">
                 <input type="hidden" name="register_value" value="Register" id="register_value" />
 
-                <button class="btn btn-primary sharp btn-md btn-style-one" id="register_submit_btn" name="op_classiera" type="submit">Register</button>
+                <button class="btn btn-primary sharp btn-md btn-style-one" id="verify_phone_btn" name="verify_phone_btn" type="submit" value="Send OTP">Send OTP</button>
+
+                <button class="btn btn-primary sharp btn-md btn-style-one" id="verify_phone_otp" name="verify_phone_otp" value="Verify Phone No." type="submit">Verify Phone No.</button>
               </div><!--register button-->
+
             </form>
           </div>
           <!--Register-->

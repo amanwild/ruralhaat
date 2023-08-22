@@ -1,4 +1,5 @@
 <section class="blog-post-section related-blog-post-section border-bottom">
+  
   <div class="container" style="overflow: hidden;">
     <div class="row">
       <div class="col-sm-6 related-blog-post-head">
@@ -38,7 +39,7 @@
           ?><div class="classiera-box-div-v1 item match-height">
                 <figure>
                   <div class="premium-img">
-                    <img class="img-responsive" src="../wp-content/uploads/data/<?= $row['listing_image'] ?>" alt="Classic black and orange motorcycle For Sale">
+                    <img class="img-responsive" src="../wp-content/uploads/data/<?= $row['listing_image'] ?>" alt="<?= $row['listing_title'] ?>">
                     <span class="hover-posts">
                       <a href="../listing_details/index.php?listing_id=<?= $row['listing_id']?>" class="btn btn-primary sharp btn-sm active">View Ad</a>
                     </span>
@@ -54,7 +55,7 @@
                       <a href="../search_ads/index.php?category_id=<?= $row['category_id'] ?>&listing_keyword=&listing_city=&search_listing=true"><?= $row['category_name'] ?></a>
                     </p>
                     <span class="category-icon-box" style=" background:<?= $row['category_color'] ?>; color:<?= $row['category_color'] ?>; ">
-                      <img src="../wp-content/uploads/data/<?= $row['category_image'] ?>" alt="Automotive">
+                      <img src="../wp-content/uploads/data/<?= $row['category_image'] ?>" alt="<?= $row['category_name'] ?>">
                     </span>
                   </figcaption>
                 </figure>
@@ -71,4 +72,30 @@
       </div><!--col-lg-12-->
     </div><!--row-->
   </div>
+  <?php if($listing_num>1){
+    ?><style>
+    .owl-prev{
+      display:block!important;
+      color:black!important;
+      background-color:white!important;
+          border: 1px solid #e0e0e0;
+          font-weight: 300;
+    }
+    .owl-next{
+      display:block!important;
+      color:black!important;
+      background-color:white!important;
+          border: 1px solid #e0e0e0;
+          font-weight: 300;
+    }
+  .owl-prev:hover{
+    color:white!important;
+    background-color:red!important;
+  }
+  .owl-next:hover{
+    color:white!important;
+    background-color:red!important;
+  }
+  </style><?php
+  }?>
 </section>

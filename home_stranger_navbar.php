@@ -24,12 +24,12 @@
 					</li>
 					<li id="menu-item-192" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-192"><a title="Categories" href="Success Stories/index.php">Success Stories</a></li>
 				
-					<!-- <li id="menu-item-193" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-33 current_page_item menu-item-193 active">
-						<a title="Contact" href="./contact/index.php">Contact</a>
-					</li> -->
 					<li id="menu-item-193" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-33 current_page_item menu-item-193 active">
-						<a title="Contact" href="./user_panel/page_not_found.php">About Us</a>
+						<a title="Contact" href="./contact/index.php">Contact</a>
 					</li>
+					<!-- <li id="menu-item-193" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-33 current_page_item menu-item-193 active">
+						<a title="Contact" href="./user_panel/page_not_found.php">About Us</a>
+					</li> -->
 				</ul>
 			</div>
 			<div class="submit-post">
@@ -75,7 +75,7 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand-custom" href="../index.php">
-						<img class="img-responsive" src="wp-content/uploads/2021/12/backlogo2.png" alt=" ">
+						<img class="img-responsive" src="wp-content/uploads/2021/12/logo-grid-3 (2).png" alt=" ">
 					</a>
 				</div><!--navbar-header-->
 				<div class="collapse navbar-collapse visible-lg" id="navbarCollapse">
@@ -97,7 +97,7 @@
 <!-- 					
 						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-193"><a title="Contact" href="./contact/index.php">Contact</a></li> -->
 					
-						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-193"><a title="Contact" href="./user_panel/page_not_found.php">About Us</a></li>
+						<!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-193"><a title="Contact" href="./user_panel/page_not_found.php">About Us</a></li> -->
 
 					</ul>
 				</div><!--collapse navbar-collapse visible-lg-->
@@ -110,7 +110,7 @@
 
 		<ul class="list-unstyled list-inline mobile-app-button">
 			<li>
-				<a href="../author/index.php">
+				<a href="./index.php">
 					<i class="fas fa-home"></i>
 					<span>Home</span>
 				</a>

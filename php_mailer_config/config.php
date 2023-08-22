@@ -18,7 +18,7 @@ $google_client->setClientId('58460991907-afq9uqmn299d8ivspkkglvip02jueh5t.apps.g
 $google_client->setClientSecret('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');
 
 //Set the OAuth 2.0 Redirect URI
-$google_client->setRedirectUri('http://ruralhaat.org.in/login/index.php');
+$google_client->setRedirectUri('https://ruralhaat.org.in/login/index.php');
 
 // to get the email and profile 
 $google_client->addScope('email');

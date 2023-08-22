@@ -4892,7 +4892,7 @@
 <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAG8h1gPKOGzHxjGdY34qJ1gYD7kqtMRGc&amp;language=en&amp;v=3.exp&amp;ver=2014-07-18' id='classiera-google-maps-script-js'></script>
 <script type='text/javascript' src='../wp-content/themes/classiera/js/classiera-map6a4d.js?ver=6.1.1' id='classiera-map-js'></script>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script>
   function show_table() {
 

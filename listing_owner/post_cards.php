@@ -13,13 +13,13 @@
   <div class="classiera-box-div classiera-box-div-v1">
     <figure class="clearfix">
       <div class="premium-img">
-        <div class="featured-tag">
+        <!-- <div class="featured-tag">
           <span class="left-corner"></span>
           <span class="right-corner"></span>
           <div class="featured" style="border-bottom-color: <?= $row_for_listing['category_color']?> !important;">
             <p>Featured</p>
           </div>
-        </div>
+        </div> -->
         <img class="img-responsive" src="../wp-content/uploads/data/<?= $row_for_listing['listing_image'] ?>" alt="Used BMW Car 2018 Model For Sale">
         <span class="hover-posts">
           <a href="../listing_details/index.php?listing_id=<?=$row_for_listing['listing_id']?>" class="btn btn-primary outline btn-sm active">View</a>

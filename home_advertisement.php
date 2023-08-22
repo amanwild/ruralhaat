@@ -36,9 +36,9 @@
 					</div><!--col-lg-6 col-sm-8-->
 					<div class="col-lg-6 col-sm-5 col-xs-4">
 						<div class="view-as text-right flip">
-							<a id="grid" class="grid " href="#">
+							<!-- <a id="grid" class="grid" href="#">
 								<i class="fas fa-th-large"></i>
-							</a>
+							</a> -->
 							<a id="grid" class="grid-medium active" href="#">
 								<i class="fa fa-th"></i>
 							</a>
@@ -165,3 +165,31 @@
 		</div><!--tab-content-->
 	</div><!--tab-divs-->
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

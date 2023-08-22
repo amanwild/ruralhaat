@@ -69,7 +69,7 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand-custom" href="../index.php">
-						<img class="img-responsive" src="wp-content/uploads/2021/12/backlogo2.png" alt=" ">
+						<img class="img-responsive" src="wp-content/uploads/2021/12/logo-grid-3 (2).png" alt=" ">
 					</a>
 				</div><!--navbar-header-->
 				<div class="collapse navbar-collapse visible-lg" id="navbarCollapse">
@@ -101,7 +101,7 @@
 
 		<ul class="list-unstyled list-inline mobile-app-button">
 			<li>
-				<a href="../author/index.php">
+				<a href="./index.php">
 					<i class="fas fa-home"></i>
 					<span>Home</span>
 				</a>

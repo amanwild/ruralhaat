@@ -594,7 +594,7 @@ a {
         padding: 12px 0; } }
     .classiera-navbar .navbar-header .navbar-brand-custom img {
       max-width: 161px;
-      width: 100%;
+      width: 50%;
       max-height: 100%;
       height: auto; }
   @media only screen and (min-width: 1025px) {

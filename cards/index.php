@@ -18,13 +18,13 @@
       <a href="../listing_details/index.php?listing_id=<?= $row['listing_id'] ?>">
         <div class="premium-img">
           <div class="featured-tag">
-            <span class="left-corner"></span>
+            <!-- <span class="left-corner"></span>
             <span class="right-corner"></span>
             <div class="featured">
               <p>Featured</p>
-            </div>
+            </div> -->
           </div>
-          <img class="img-responsive" src="../wp-content/uploads/data/<?= $row['listing_image'] ?>" alt="Used BMW Car 2018 Model For Sale" />
+          <img class="img-responsive" src="../wp-content/uploads/data/<?= $row['listing_image'] ?>" alt="<?= $row['listing_title'] ?>" />
           <span class="hover-posts">
             <span>View Ad</span>
           </span>

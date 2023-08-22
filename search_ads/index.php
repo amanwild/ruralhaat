@@ -652,7 +652,7 @@ WHERE " . $condition_on_category_id . " (listing_keyword LIKE '%$listing_keyword
 
     }
   </script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
   <script>
     function validation_for_email_username_phone() {
       var email = document.getElementById("register_email");
@@ -698,7 +698,7 @@ WHERE " . $condition_on_category_id . " (listing_keyword LIKE '%$listing_keyword
     }
   </script>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function() {

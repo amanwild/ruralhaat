@@ -4802,7 +4802,7 @@ include "db.php";
 			<div class="row">
 				<div class="classiera-static-slider-content text-center">
 					<a href="#" class="my-link">
-						<h1>Say hello t <span class="color">Ruralhaat</span>.</h1>
+						<h1>Say hello to <span class="color">Ruralhaat</span>.</h1>
 					</a>
 					<!-- <h1>Say hello to <span class="color">Ruralhaat</span>.</h1> -->
 				</div>
@@ -5036,6 +5036,7 @@ include "db.php";
 	</section>
 
 	<?php include "./home_banner.php" ?>
+	
 	<?php include "./home_advertisement.php" ?>
 	<?php include "./home_location.php" ?>
 
@@ -5220,8 +5221,6 @@ include "db.php";
 				</div>
 			</div>
 		</div>
-		</div><!--row-->
-		</div><!--container-->
 	</footer>
 	<style>
 		.sampleMarquee {
@@ -5499,7 +5498,7 @@ include "db.php";
 	<script src="./user_panel/scripts/jquery_custom.js"></script>
 
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function() {

@@ -1,5 +1,33 @@
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script>
+  $(document).ready(function() {
+    $("#verify_phone_for_register").submit(function(e) {
+      e.preventDefault();
+
+      var verify_phone = $("#verify_phone").val(); //build a post data structure
+      var verify_value = $("#verify_value").val(); //build a post data structure
+      jQuery.ajax({
+        type: "POST", // Post / Get method
+        url: "verify_phone.php", //Where form data is sent on submission
+        dataType: "text", // Data type, HTML, json etc.
+        data: {
+          verify_phone: verify_phone,
+          verify_value: verify_value,
+        }, //Form variables
+        success: function(response) {
+
+          console.log(response);
+          alert(
+            'OTP Sent Successfully\n\n'
+          );
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+          alert(thrownError);
+        }
+      });
+    });
+
+  });
 
   function validation_for_email_username_phone() {
     var email = document.getElementById("register_email");
@@ -25,17 +53,17 @@
         console.log(json_data[0][0]);
         console.log(json_data[1][0]);
         console.log(json_data[2][0]);
-        if(0<(json_data[0][0]).length){
+        if (0 < (json_data[0][0]).length) {
           $('#label_for_username_validation').html(json_data[0][1]);
         }
-        if(0<(json_data[1][0]).length){
+        if (0 < (json_data[1][0]).length) {
           $('#label_for_email_validation').html(json_data[1][1]);
         }
-        if(0<(json_data[2][0]).length){
+        if (0 < (json_data[2][0]).length) {
           $('#label_for_phone_validation').html(json_data[2][1]);
         }
 
-        if (0 < (json_data[0][1]+json_data[1][1]+json_data[2][1]).length) {
+        if (0 < (json_data[0][1] + json_data[1][1] + json_data[2][1]).length) {
           document.getElementById("register_submit_btn").disabled = true;
         } else {
           document.getElementById("register_submit_btn").disabled = false;
